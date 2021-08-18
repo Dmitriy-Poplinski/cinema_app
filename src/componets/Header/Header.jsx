@@ -7,16 +7,16 @@ export function Header () {
                 <span>Cinema App</span>
             </div>
             <div className={classes.headerMenu}>
-                <div>
+                <div className={classes.headerMenuItem}>
                     Фільми сьогодні
                 </div>
-                <div>
+                <div className={classes.headerMenuItem}>
                     Фільми завтра
                 </div>
-                <div>
+                <div className={classes.headerMenuItem}>
                     Вибрати дату
                 </div>
-                <div>
+                <div className={classes.headerMenuItem}>
                     Про нас
                 </div>
             </div>
