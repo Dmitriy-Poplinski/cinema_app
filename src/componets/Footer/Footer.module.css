@@ -1,0 +1,13 @@
+.footer {
+    height: 100px;
+    background-color: #2d3540;
+    color: #fff;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+}
+
+.copy {
+    margin-left: 20px;
+}
+
