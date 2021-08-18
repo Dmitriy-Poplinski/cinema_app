@@ -1,7 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import { Header } from './componets/Header/Header';
-import { BrowserRouter, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import { About } from './componets/About/About';
 
 

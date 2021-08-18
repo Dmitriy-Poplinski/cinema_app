@@ -40,3 +40,8 @@
 .content {
   padding-top: 100px;
 }
+
+a {
+  text-decoration: none;
+  color: white;
+}
