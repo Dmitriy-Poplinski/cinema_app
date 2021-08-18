@@ -1,4 +1,19 @@
 .header {
     height: 100px;
-    background-color: red;
+    background-color: #aaa;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.headerMenu {
+    display: flex;
+    font-size: 20px;
+    align-items: center;
 }
