@@ -1,4 +1,3 @@
-import styled from 'styled-components'
 import {Carousel, Button} from 'react-bootstrap'
 import BlackWidowPoster from './../../assets/images/Black_widow.jpg'
 
@@ -21,18 +20,18 @@ const styleParag = {
     marginTop: '20px'
 }
 
-export function PremierePoster () {
+export function PremierePoster (props) {
     return (
         <Carousel.Item interval={1000}>
             <img
                 style={styleImg}
                 className="d-block w-100"
                 src={BlackWidowPoster}
-                alt="First slide"
+                alt={'Text'}
             />
             <Carousel.Caption>
                 <Button variant="info" style={styleTitle}>Детальніше</Button>
-                <p style={styleParag}>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                <p style={styleParag}>{'ddddd'}</p>
             </Carousel.Caption>
         </Carousel.Item>
     )

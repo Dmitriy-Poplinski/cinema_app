@@ -7,14 +7,38 @@ import * as _ from 'lodash'
 export function Today () {
     const [data, setPosters] = useState([
         [
-            {posterImage: BlackWidowPoster},
-            {posterImage: BlackWidowPoster},
-            {posterImage: BlackWidowPoster},
+            {
+                posterImage: BlackWidowPoster,
+                date: '22.08.2021',
+                time: '10:00',
+            },
+            {
+                posterImage: BlackWidowPoster,
+                date: '22.08.2021',
+                time: '12:00',
+            },
+            {
+                posterImage: BlackWidowPoster,
+                date: '22.08.2021',
+                time: '14:00',
+            },
         ],
         [
-            {posterImage: BlackWidowPoster},
-            {posterImage: BlackWidowPoster},
-            {posterImage: BlackWidowPoster},
+            {
+                posterImage: BlackWidowPoster,
+                date: '22.08.2021',
+                time: '16:00',
+            },
+            {
+                posterImage: BlackWidowPoster,
+                date: '22.08.2021',
+                time: '18:00',
+            },
+            {
+                posterImage: BlackWidowPoster,
+                date: '22.08.2021',
+                time: '20:00',
+            },
         ] 
     ])
 
@@ -24,7 +48,7 @@ export function Today () {
                 <Row>
                     {
                         _.map(posters, (poster) => {
-                            return <Poster posterImage={poster.posterImage}/>
+                            return <Poster poster={poster}/>
                         })
                     }
                 </Row>

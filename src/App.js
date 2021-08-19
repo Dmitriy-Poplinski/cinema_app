@@ -24,6 +24,7 @@ function App() {
             <Route exact path='/about' component={About}/>
             <Route exact path='/today' component={Today}/>
             <Route exact path='/tommorow' component={Tommorow}/>
+            
           </Row>
           <Row>
             <Footer />
