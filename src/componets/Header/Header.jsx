@@ -50,7 +50,7 @@ export function Header () {
                             <NavLink to='/today'>Фільми сьогодні</NavLink>
                         </HeaderMenuItem>
                         <HeaderMenuItem>
-                            <NavLink to='/'>Фільми завтра</NavLink>
+                            <NavLink to='/tommorow'>Фільми завтра</NavLink>
                         </HeaderMenuItem>
                         <HeaderMenuItem>
                             <NavLink to='/'>Вибрати дату</NavLink>

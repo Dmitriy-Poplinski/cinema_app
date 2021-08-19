@@ -16,40 +16,38 @@ const styleImg = {
 }
 
 const styleButton = {
-    width: '180px',
-    marginLeft: '100px',
-    marginTop: '30px'
+    width: '180px'
 }
 
-export function Today () {
+export function Tommorow () {
     return (
         <Container>
             <Row>
                 <Col style={styleCol}>
                     <img src={BlackWidowPoster} style={styleImg}/>
-                    <Button variant="info" style={styleButton}>Детальніше &#8658;</Button>
+                    <Button variant="info" style={styleButton}>Детальніше</Button>
                 </Col>
                 <Col style={styleCol}>
                     <img src={BlackWidowPoster} style={styleImg}/>
-                    <Button variant="info" style={styleButton}>Детальніше &#8658;</Button>
+                    <Button variant="info" style={styleButton}>Детальніше</Button>
                 </Col>
                 <Col style={styleCol}>
                     <img src={BlackWidowPoster} style={styleImg}/>
-                    <Button variant="info" style={styleButton}>Детальніше &#8658;</Button>
+                    <Button variant="info" style={styleButton}>Детальніше</Button>
                 </Col>
             </Row>
             <Row>
                 <Col style={styleCol}>
                     <img src={BlackWidowPoster} style={styleImg}/>
-                    <Button variant="info" style={styleButton}>Детальніше &#8658;</Button>
+                    <Button variant="info" style={styleButton}>Детальніше</Button>
                 </Col>
                 <Col style={styleCol}>
                     <img src={BlackWidowPoster} style={styleImg}/>
-                    <Button variant="info" style={styleButton}>Детальніше &#8658;</Button>
+                    <Button variant="info" style={styleButton}>Детальніше</Button>
                 </Col>
                 <Col style={styleCol}>
                     <img src={BlackWidowPoster} style={styleImg}/>
-                    <Button variant="info" style={styleButton}>Детальніше &#8658;</Button>
+                    <Button variant="info" style={styleButton}>Детальніше</Button>
                 </Col>
             </Row>
         </Container>

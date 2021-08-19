@@ -5,6 +5,7 @@ import { Footer } from './componets/Footer/Footer';
 import styled from 'styled-components'
 import {Container, Row} from 'react-bootstrap'
 import { Today } from './componets/Today/Today';
+import { Tommorow } from './componets/Tommorow/Tommorow';
 
 const AppWrapper = styled.div`
 position: relative;
@@ -28,6 +29,7 @@ function App() {
             <Route exact path='/' render={() => <Main>Cinema App</Main>}/>
             <Route exact path='/about' component={About}/>
             <Route exact path='/today' component={Today}/>
+            <Route exact path='/tommorow' component={Tommorow}/>
           </Row>
           <Row>
             <Footer />
