@@ -1,27 +1,57 @@
-import classes from './Header.module.css'
 import { NavLink } from 'react-router-dom';
+import styled from 'styled-components'
+
+const HeaderWrapper = styled.header`
+position: fixed;
+width: 100%;
+height: 100px;
+background-color: #2d3540;
+display: flex;
+justify-content: space-between;
+color: #fff;
+`
+
+const Logo = styled.div`
+margin-left: 20px;
+font-size: 30px;
+text-align: center;
+display: flex;
+align-items: center;
+`
+
+const HeaderMenuWrapper = styled.div`
+display: flex;
+font-size: 20px;
+align-items: center;
+margin-right: 50px;
+`
+
+const HeaderMenuItem = styled.div`
+padding: 20px;
+cursor: pointer;
+`
 
 
 export function Header () {
     return (
-            <header className={classes.header}>
-                <div className={classes.logo}>
+            <HeaderWrapper>
+                <Logo>
                     <span><NavLink to='/'>Cinema App</NavLink></span>
-                </div>
-                <div className={classes.headerMenu}>
-                    <div className={classes.headerMenuItem}>
+                </Logo>
+                <HeaderMenuWrapper>
+                    <HeaderMenuItem>
                         Фільми сьогодні
-                    </div>
-                    <div className={classes.headerMenuItem}>
+                    </HeaderMenuItem>
+                    <HeaderMenuItem>
                         Фільми завтра
-                    </div>
-                    <div className={classes.headerMenuItem}>
+                    </HeaderMenuItem>
+                    <HeaderMenuItem>
                         Вибрати дату
-                    </div>
-                    <div className={classes.headerMenuItem}>
+                    </HeaderMenuItem>
+                    <HeaderMenuItem>
                         <NavLink to='/about'>Про нас</NavLink>
-                    </div>
-                </div>
-            </header>        
+                    </HeaderMenuItem>
+                </HeaderMenuWrapper>
+            </HeaderWrapper>        
     )
 }

@@ -1,19 +1,30 @@
-import './App.css';
 import { Header } from './componets/Header/Header';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { About } from './componets/About/About';
 import { Footer } from './componets/Footer/Footer';
+import styled from 'styled-components'
 
+const AppWrapper = styled.div`
+height: 2000px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+background: greenyellow;
+`
+
+const Main = styled.div`
+padding-top: 100px;
+`
 
 function App() {
   return (
     <BrowserRouter>
-        <div className="App">
+        <AppWrapper>
           <Header />
-          <Route exact path='/' render={() => <div className='content'>Cinema App</div>}/>
+          <Route exact path='/' render={() => <Main>Cinema App</Main>}/>
           <Route exact path='/about' component={About}/>
           <Footer />
-        </div>
+        </AppWrapper>
       </BrowserRouter>
   );
 }
