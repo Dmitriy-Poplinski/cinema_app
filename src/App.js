@@ -7,6 +7,7 @@ import {Container, Row} from 'react-bootstrap'
 import { Today } from './componets/Today/Today';
 import { Tommorow } from './componets/Tommorow/Tommorow';
 import { MainPage } from './componets/MainPage/MainPage';
+import { ModalDate } from './componets/ModalDate/ModalDate';
 
 const AppWrapper = styled.div`
 position: relative;
@@ -24,7 +25,7 @@ function App() {
             <Route exact path='/about' component={About}/>
             <Route exact path='/today' component={Today}/>
             <Route exact path='/tommorow' component={Tommorow}/>
-            
+            <Route exact path='/date' component={ModalDate}/>
           </Row>
           <Row>
             <Footer />

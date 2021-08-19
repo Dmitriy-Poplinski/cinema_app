@@ -1,8 +1,10 @@
+import { useState } from 'react'
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components'
 import {Navbar} from 'react-bootstrap'
 import {Nav} from 'react-bootstrap'
 import {Container} from 'react-bootstrap'
+import { ModalDate } from '../ModalDate/ModalDate';
 
 const HeaderWrapper = styled.header`
 position: fixed;
@@ -36,6 +38,11 @@ cursor: pointer;
 
 
 export function Header () {
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     return (
         <Navbar bg="dark" variant="dark">
             <Container>
@@ -53,12 +60,13 @@ export function Header () {
                             <NavLink to='/tommorow'>Фільми завтра</NavLink>
                         </HeaderMenuItem>
                         <HeaderMenuItem>
-                            <NavLink to='/'>Вибрати дату</NavLink>
+                            <NavLink to='/date' onClick={handleShow}>Вибрати дату</NavLink>
                         </HeaderMenuItem>
                         <HeaderMenuItem>
                             <NavLink to='/about'>Про нас</NavLink>
                         </HeaderMenuItem>
                     </Nav>
+                    <ModalDate handleClose={handleClose} show={show}/>
                 </HeaderMenuWrapper>
             </Container>
         </Navbar>    
