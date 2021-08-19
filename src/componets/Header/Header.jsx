@@ -47,7 +47,7 @@ export function Header () {
                 <HeaderMenuWrapper>
                     <Nav className="me-auto">
                         <HeaderMenuItem>
-                            <NavLink to='/'>Фільми сьогодні</NavLink>
+                            <NavLink to='/today'>Фільми сьогодні</NavLink>
                         </HeaderMenuItem>
                         <HeaderMenuItem>
                             <NavLink to='/'>Фільми завтра</NavLink>

@@ -4,10 +4,11 @@ import { About } from './componets/About/About';
 import { Footer } from './componets/Footer/Footer';
 import styled from 'styled-components'
 import {Container, Row} from 'react-bootstrap'
+import { Today } from './componets/Today/Today';
 
 const AppWrapper = styled.div`
-height: 2000px;
 position: relative;
+height: 1500px;
 // display: grid;
 // flex-direction: column;
 // justify-content: space-between;
@@ -26,6 +27,7 @@ function App() {
           <Row>
             <Route exact path='/' render={() => <Main>Cinema App</Main>}/>
             <Route exact path='/about' component={About}/>
+            <Route exact path='/today' component={Today}/>
           </Row>
           <Row>
             <Footer />
