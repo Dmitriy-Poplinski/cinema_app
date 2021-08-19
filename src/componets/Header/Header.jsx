@@ -1,5 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components'
+import {Navbar} from 'react-bootstrap'
+import {Nav} from 'react-bootstrap'
+import {Container} from 'react-bootstrap'
 
 const HeaderWrapper = styled.header`
 position: fixed;
@@ -34,24 +37,55 @@ cursor: pointer;
 
 export function Header () {
     return (
-            <HeaderWrapper>
-                <Logo>
-                    <span><NavLink to='/'>Cinema App</NavLink></span>
-                </Logo>
-                <HeaderMenuWrapper>
-                    <HeaderMenuItem>
-                        Фільми сьогодні
-                    </HeaderMenuItem>
-                    <HeaderMenuItem>
-                        Фільми завтра
-                    </HeaderMenuItem>
-                    <HeaderMenuItem>
-                        Вибрати дату
-                    </HeaderMenuItem>
-                    <HeaderMenuItem>
-                        <NavLink to='/about'>Про нас</NavLink>
-                    </HeaderMenuItem>
-                </HeaderMenuWrapper>
-            </HeaderWrapper>        
+        <Navbar bg="dark" variant="dark">
+            <Container>
+                <Navbar.Brand href="#home">
+                    <Logo>
+                        <NavLink to='/'>Cinema App</NavLink>
+                    </Logo>
+                </Navbar.Brand>
+                <Nav className="me-auto">
+                    <Nav.Link href="#home">Home</Nav.Link>
+                    <Nav.Link href="#features">Features</Nav.Link>
+                    <Nav.Link href="#pricing">Pricing</Nav.Link>
+                </Nav>
+            </Container>
+        </Navbar>
+
+            // <HeaderWrapper>
+                // <Navbar bg="dark" variant="dark">
+                //     <Container>
+                //     {/* <Logo> */}
+                //     <Navbar.Brand href="#home">
+                //         Cinema App
+                //         {/* <span><NavLink to='/'>Cinema App</NavLink></span> */}
+                //     </Navbar.Brand>
+                //     {/* </Logo> */}
+                //     {/* <HeaderMenuWrapper> */}
+                //     <Nav className="me-auto">
+                //         {/* <HeaderMenuItem> */}
+                //         <Nav.Link href="#home">
+                //             Фільми сьогодні
+                //         </Nav.Link>
+                //         {/* </HeaderMenuItem> */}
+                //         {/* <HeaderMenuItem> */}
+                //         <Nav.Link href="#home">
+                //         Фільми завтра
+                //         </Nav.Link>
+                            
+                //         {/* </HeaderMenuItem> */}
+                //         {/* <HeaderMenuItem> */}
+                //             <Nav.Link href="#home">
+                //                 Вибрати дату
+                //             </Nav.Link>
+                //         {/* </HeaderMenuItem> */}
+                //         {/* <HeaderMenuItem> */}
+                //             <NavLink to='/about'>Про нас</NavLink>
+                //         {/* </HeaderMenuItem> */}
+                //         </Nav>
+                //     {/* </HeaderMenuWrapper> */}
+                //     </Container>
+                // </Navbar>
+            // </HeaderWrapper>        
     )
 }

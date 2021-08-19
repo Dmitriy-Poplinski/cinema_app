@@ -9,7 +9,6 @@ height: 2000px;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
-background: greenyellow;
 `
 
 const Main = styled.div`
