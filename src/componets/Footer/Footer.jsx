@@ -1,6 +1,11 @@
 import styled from 'styled-components'
 
 const FooterWrapper = styled.div`
+position: absolute;
+bottom: 0
+`
+
+const FooterInner = styled.div`
 height: 100px;
 background-color: #2d3540;
 color: #fff;
@@ -18,7 +23,9 @@ margin-left: 20px;
 export function Footer () {
     return (
         <FooterWrapper>
-            <Copy>&copy;Cinema</Copy>
-        </FooterWrapper>
+            <FooterInner>
+                <Copy>&copy;Cinema</Copy>
+            </FooterInner>
+        </FooterWrapper>    
     )
 }

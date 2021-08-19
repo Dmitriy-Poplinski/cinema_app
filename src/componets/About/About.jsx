@@ -2,7 +2,7 @@ import { Fragment } from 'react'
 import styled from 'styled-components'
 
 const AboutWrapper = styled.div`
-padding-top: 100px;
+// padding-top: 100px;
 padding-left: 30px;
 width: 90%;
 `
