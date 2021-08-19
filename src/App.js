@@ -6,17 +6,11 @@ import styled from 'styled-components'
 import {Container, Row} from 'react-bootstrap'
 import { Today } from './componets/Today/Today';
 import { Tommorow } from './componets/Tommorow/Tommorow';
+import { MainPage } from './componets/MainPage/MainPage';
 
 const AppWrapper = styled.div`
 position: relative;
 height: 1500px;
-// display: grid;
-// flex-direction: column;
-// justify-content: space-between;
-`
-
-const Main = styled.div`
-// padding-top: 100px;
 `
 
 function App() {
@@ -26,7 +20,7 @@ function App() {
         <AppWrapper>
           <Row><Header /></Row>
           <Row>
-            <Route exact path='/' render={() => <Main>Cinema App</Main>}/>
+            <Route exact path='/' component={MainPage}/>
             <Route exact path='/about' component={About}/>
             <Route exact path='/today' component={Today}/>
             <Route exact path='/tommorow' component={Tommorow}/>
