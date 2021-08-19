@@ -11,7 +11,8 @@ export function ModalDate (props) {
                     <Modal.Title>Modal heading</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <FloatingLabel controlId="floatingSelect" label="Works with selects">
+                    <input type='date'/>
+                    {/* <FloatingLabel controlId="floatingSelect" label="Works with selects">
                         <Form.Select aria-label="Floating label select example">
                             <option>Open this select menu</option>
                             <option value="1">{moment().format('DD:MM:YYYY')}</option>
@@ -21,7 +22,7 @@ export function ModalDate (props) {
                             <option value="3">{moment().format('DD:MM:YYYY')}</option>
                             <option value="3">{moment().format('DD:MM:YYYY')}</option>
                         </Form.Select>
-                    </FloatingLabel>
+                    </FloatingLabel> */}
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={props.handleClose}>

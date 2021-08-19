@@ -37,11 +37,19 @@ cursor: pointer;
 `
 
 
-export function Header () {
+export function Header (props) {
     const [show, setShow] = useState(false);
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const handleClose = () => {
+        setShow(false)
+        window.history.pushState({}, '', '/')
+        props.redirectToMain()
+    };
+    const handleShow = () => {
+        setShow(true)
+        window.history.pushState({}, '', '/date')
+        props.redirectToDate()
+    };
 
     return (
         <Navbar bg="dark" variant="dark">

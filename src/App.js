@@ -1,5 +1,6 @@
+import {useState} from 'react'
 import { Header } from './componets/Header/Header';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Redirect } from 'react-router-dom';
 import { About } from './componets/About/About';
 import { Footer } from './componets/Footer/Footer';
 import styled from 'styled-components'
@@ -15,17 +16,29 @@ height: 1500px;
 `
 
 function App() {
+  const [date, setDate] = useState(false)
+
+  function redirectToMain () {
+    setDate(true)
+  }
+
+  function redirectToDate () {
+    setDate(false)
+  }
+
   return (
     <BrowserRouter>
       <Container>
         <AppWrapper>
-          <Row><Header /></Row>
+          <Row><Header redirectToMain={redirectToMain} redirectToDate={redirectToDate}/></Row>
           <Row>
-            <Route exact path='/' component={MainPage}/>
+            <Route exact path='/' component={MainPage}/> 
             <Route exact path='/about' component={About}/>
             <Route exact path='/today' component={Today}/>
             <Route exact path='/tommorow' component={Tommorow}/>
-            <Route exact path='/date' component={ModalDate}/>
+            <Route exact path='/date'> 
+              {date ? <Redirect to="/" /> : <ModalDate />}
+            </Route>
           </Row>
           <Row>
             <Footer />
