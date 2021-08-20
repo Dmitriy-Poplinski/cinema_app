@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 const AboutWrapper = styled.div`
-// padding-top: 100px;
+margin-top: 100px;
+height: 100vh;
 padding-left: 30px;
 width: 90%;
 `

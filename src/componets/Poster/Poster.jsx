@@ -19,7 +19,6 @@ const styleImg = {
 const styleButton = {
     width: '180px',
     marginTop: '50px',
-    marginLeft: '150px',
 
 }
 

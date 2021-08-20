@@ -6,22 +6,15 @@ import {Nav} from 'react-bootstrap'
 import {Container} from 'react-bootstrap'
 import { ModalDate } from '../ModalDate/ModalDate';
 
-const HeaderWrapper = styled.header`
-position: fixed;
-width: 100%;
-height: 100px;
-background-color: #2d3540;
-display: flex;
-justify-content: space-between;
-color: #fff;
-`
-
 const Logo = styled.div`
 margin-left: 20px;
 font-size: 30px;
 text-align: center;
 display: flex;
 align-items: center;
+@media (max-width: 320px) {
+    font-size: 16px;
+}
 `
 
 const HeaderMenuWrapper = styled.div`
@@ -52,31 +45,34 @@ export function Header (props) {
     };
 
     return (
-        <Navbar bg="dark" variant="dark">
+        <Navbar bg="dark" variant="dark" expand="lg" fixed='top' collapseOnSelect>
             <Container>
                 <Navbar.Brand href="#home">
                     <Logo>
                         <NavLink to='/'>Cinema App</NavLink>
                     </Logo>
                 </Navbar.Brand>
-                <HeaderMenuWrapper>
-                    <Nav className="me-auto">
-                        <HeaderMenuItem>
-                            <NavLink to='/today'>Фільми сьогодні</NavLink>
-                        </HeaderMenuItem>
-                        <HeaderMenuItem>
-                            <NavLink to='/tommorow'>Фільми завтра</NavLink>
-                        </HeaderMenuItem>
-                        <HeaderMenuItem>
-                            <NavLink to='/date' onClick={handleShow}>Вибрати дату</NavLink>
-                        </HeaderMenuItem>
-                        <HeaderMenuItem>
-                            <NavLink to='/about'>Про нас</NavLink>
-                        </HeaderMenuItem>
-                    </Nav>
-                    <ModalDate handleClose={handleClose} show={show}/>
-                </HeaderMenuWrapper>
+                <Navbar.Toggle aria-controls='responsive-navbar-nav'/>
+                <Navbar.Collapse>
+                    <HeaderMenuWrapper>
+                        <Nav className="me-auto">
+                            <HeaderMenuItem>
+                                <NavLink to='/today'>Фільми сьогодні</NavLink>
+                            </HeaderMenuItem>
+                            <HeaderMenuItem>
+                                <NavLink to='/tommorow'>Фільми завтра</NavLink>
+                            </HeaderMenuItem>
+                            <HeaderMenuItem>
+                                <NavLink to='/date' onClick={handleShow}>Вибрати дату</NavLink>
+                            </HeaderMenuItem>
+                            <HeaderMenuItem>
+                                <NavLink to='/about'>Про нас</NavLink>
+                            </HeaderMenuItem>
+                        </Nav>
+                        <ModalDate handleClose={handleClose} show={show}/>
+                    </HeaderMenuWrapper>
+                </Navbar.Collapse>
             </Container>
-        </Navbar>    
+        </Navbar>
     )
 }

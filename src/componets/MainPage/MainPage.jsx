@@ -6,7 +6,7 @@ import {useState} from 'react'
 import * as _ from 'lodash'
 
 const TitleWrapper = styled.div`
-margin-top: 40px;
+margin-top: 80px;
 text-align: center;
 font-size: 40px
 `

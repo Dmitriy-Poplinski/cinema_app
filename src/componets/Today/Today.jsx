@@ -1,8 +1,13 @@
+import styled from 'styled-components'
 import {Container, Row} from 'react-bootstrap'
 import BlackWidowPoster from './../../assets/images/Black_widow.jpg'
 import {useState} from 'react'
 import { Poster } from '../Poster/Poster'
 import * as _ from 'lodash'
+
+const RowWrapper = styled.div`
+margin-top: 100px;
+`
 
 export function Today () {
     const [data, setPosters] = useState([
@@ -64,7 +69,7 @@ export function Today () {
 
     return (
         <Container>
-            {Items()}
+            <RowWrapper>{Items()}</RowWrapper>
         </Container>
     )
 }
