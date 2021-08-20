@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import styled from 'styled-components'
 import {Navbar} from 'react-bootstrap'
 import {Nav} from 'react-bootstrap'
@@ -10,8 +10,6 @@ const Logo = styled.div`
 margin-left: 20px;
 font-size: 30px;
 text-align: center;
-display: flex;
-align-items: center;
 @media (max-width: 320px) {
     font-size: 16px;
 }
@@ -21,7 +19,7 @@ const HeaderMenuWrapper = styled.div`
 display: flex;
 font-size: 20px;
 align-items: center;
-margin-right: 50px;
+margin-right: 0;
 `
 
 const HeaderMenuItem = styled.div`
@@ -47,26 +45,34 @@ export function Header (props) {
     return (
         <Navbar bg="dark" variant="dark" expand="lg" fixed='top' collapseOnSelect>
             <Container>
-                <Navbar.Brand href="#home">
+                <Navbar.Brand href="#home" >
                     <Logo>
                         <NavLink to='/'>Cinema App</NavLink>
                     </Logo>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls='responsive-navbar-nav'/>
-                <Navbar.Collapse>
+                <Navbar.Collapse className='mr-2'>
                     <HeaderMenuWrapper>
-                        <Nav className="me-auto">
+                        <Nav>
                             <HeaderMenuItem>
-                                <NavLink to='/today'>Фільми сьогодні</NavLink>
+                                <Nav.Link>
+                                    <Link to='/today'>Фільми сьогодні</Link>
+                                </Nav.Link>
                             </HeaderMenuItem>
                             <HeaderMenuItem>
-                                <NavLink to='/tommorow'>Фільми завтра</NavLink>
+                                <Nav.Link>
+                                    <Link to='/tommorow'>Фільми завтра</Link>
+                                </Nav.Link>
                             </HeaderMenuItem>
                             <HeaderMenuItem>
-                                <NavLink to='/date' onClick={handleShow}>Вибрати дату</NavLink>
+                                <Nav.Link>
+                                    <Link to='/date' onClick={handleShow}>Вибрати дату</Link>
+                                </Nav.Link>
                             </HeaderMenuItem>
                             <HeaderMenuItem>
-                                <NavLink to='/about'>Про нас</NavLink>
+                                <Nav.Link>
+                                    <Link to='/about'>Про нас</Link>
+                                </Nav.Link>
                             </HeaderMenuItem>
                         </Nav>
                         <ModalDate handleClose={handleClose} show={show}/>

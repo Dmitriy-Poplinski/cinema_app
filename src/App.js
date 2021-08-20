@@ -12,7 +12,7 @@ import { ModalDate } from './componets/ModalDate/ModalDate';
 
 const AppWrapper = styled.div`
 position: relative;
-height: calc(100%);
+height: 100%;
 `
 
 function App() {
@@ -37,7 +37,7 @@ function App() {
             <Route exact path='/today' component={Today}/>
             <Route exact path='/tommorow' component={Tommorow}/>
             <Route exact path='/date'> 
-              {date ? <Redirect to="/" /> : <ModalDate />}
+              {date ? <Redirect to="/" /> : <MainPage><ModalDate /></MainPage>}
             </Route>
           </Row>
           <Row>

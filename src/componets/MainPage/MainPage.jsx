@@ -11,19 +11,27 @@ text-align: center;
 font-size: 40px
 `
 
+const TextWrapper = styled.span`
+@media (max-width: 700px) {
+    font-size: 16px;
+}
+`
+
 const styleImg = {
-    width: '90%',
-    height: '900px'
+    height: '900px',
+    margin: '0 auto'
 }
 
 const styleTitle = {
-    width: '100%',
+    width: '60%',
     padding: '20px',
     fontSize: '40px'
 }
 
 const styleParag = {
-    width: '100%',
+    marginRight: 'auto',
+    marginLeft: 'auto',
+    width: '60%',
     padding: '20px',
     fontSize: '30px',
     backgroundColor: '#ccc',
@@ -67,44 +75,44 @@ export function MainPage () {
     return (
         <Container>
             <Row>
-               <TitleWrapper>Премьеры</TitleWrapper> 
+               <TitleWrapper>Прем'єри</TitleWrapper> 
             </Row>
             <Row>
                 <Carousel>
                     <Carousel.Item interval={1000}>
                         <img
                             style={styleImg}
-                            className="d-block w-100"
+                            className="d-block w-70"
                             src={BlackWidowPoster}
                             alt={'No'}
                         />
                         <Carousel.Caption>
-                            <Button variant="info" style={styleTitle}>Детальніше</Button>
-                            <p style={styleParag}>Прем'єра Чорна вдова</p>
+                            <Button variant="info" style={styleTitle}><TextWrapper>Детальніше</TextWrapper></Button>
+                            <p style={styleParag}><TextWrapper>Прем'єра Чорна вдова</TextWrapper></p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item interval={1000}>
                         <img
                             style={styleImg}
-                            className="d-block w-100"
+                            className="d-block w-70"
                             src={BlackWidowPoster}
                             alt={'No'}
                         />
                         <Carousel.Caption>
-                            <Button variant="info" style={styleTitle}>Детальніше</Button>
-                            <p style={styleParag}>Прем'єра Чорна вдова</p>
+                            <Button variant="info" style={styleTitle}><TextWrapper>Детальніше</TextWrapper></Button>
+                            <p style={styleParag}><TextWrapper>Прем'єра Чорна вдова</TextWrapper></p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item interval={1000}>
                         <img
                             style={styleImg}
-                            className="d-block w-100"
+                            className="d-block w-70"
                             src={BlackWidowPoster}
                             alt={'No'}
                         />
                         <Carousel.Caption>
-                            <Button variant="info" style={styleTitle}>Детальніше</Button>
-                            <p style={styleParag}>Прем'єра Чорна вдова</p>
+                            <Button variant="info" style={styleTitle}><TextWrapper>Детальніше</TextWrapper></Button>
+                            <p style={styleParag}><TextWrapper>Прем'єра Чорна вдова</TextWrapper></p>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>

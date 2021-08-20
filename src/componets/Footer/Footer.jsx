@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 
 const FooterWrapper = styled.div`
-position: absolute;
 margin-left: 10px;
-bottom: -150;
+margin-top: 50px;
 `
 
 const FooterInner = styled.div`
