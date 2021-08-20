@@ -18,8 +18,8 @@ text-align: center;
 const HeaderMenuWrapper = styled.div`
 display: flex;
 font-size: 20px;
+margin-left: auto;
 align-items: center;
-margin-right: 0;
 `
 
 const HeaderMenuItem = styled.div`
@@ -44,7 +44,6 @@ export function Header (props) {
 
     return (
         <Navbar bg="dark" variant="dark" expand="lg" fixed='top' collapseOnSelect>
-            <Container>
                 <Navbar.Brand href="#home" >
                     <Logo>
                         <NavLink to='/'>Cinema App</NavLink>
@@ -53,7 +52,7 @@ export function Header (props) {
                 <Navbar.Toggle aria-controls='responsive-navbar-nav'/>
                 <Navbar.Collapse className='mr-2'>
                     <HeaderMenuWrapper>
-                        <Nav>
+                        <Nav className='mr-2'>
                             <HeaderMenuItem>
                                 <Nav.Link>
                                     <Link to='/today'>Фільми сьогодні</Link>
@@ -78,7 +77,6 @@ export function Header (props) {
                         <ModalDate handleClose={handleClose} show={show}/>
                     </HeaderMenuWrapper>
                 </Navbar.Collapse>
-            </Container>
         </Navbar>
     )
 }

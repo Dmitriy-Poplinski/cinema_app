@@ -17,6 +17,10 @@ const TextWrapper = styled.span`
 }
 `
 
+const containerStyle={
+    marginTop: '50px',
+}
+
 const styleImg = {
     height: '900px',
     margin: '0 auto'
@@ -73,7 +77,7 @@ export function MainPage () {
     ])
 
     return (
-        <Container>
+        <Container style={containerStyle}>
             <Row>
                <TitleWrapper>Прем'єри</TitleWrapper> 
             </Row>
