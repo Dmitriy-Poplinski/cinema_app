@@ -12,7 +12,7 @@ import { ModalDate } from './componets/ModalDate/ModalDate';
 
 const AppWrapper = styled.div`
 position: relative;
-height: 1500px;
+height: calc(100%);
 `
 
 function App() {

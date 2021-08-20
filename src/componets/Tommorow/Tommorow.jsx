@@ -1,4 +1,3 @@
-import styled from 'styled-components'
 import {Container, Row, Col} from 'react-bootstrap'
 import {useState} from 'react'
 import BlackWidowPoster from './../../assets/images/Black_widow.jpg'
@@ -12,16 +11,19 @@ export function Tommorow () {
                 posterImage: BlackWidowPoster,
                 date: '23.08.2021',
                 time: '10:00',
+                id: 7,
             },
             {
                 posterImage: BlackWidowPoster,
                 date: '23.08.2021',
                 time: '12:00',
+                id: 8,
             },
             {
                 posterImage: BlackWidowPoster,
                 date: '23.08.2021',
                 time: '14:00',
+                id: 9,
             },
         ],
         [
@@ -29,16 +31,19 @@ export function Tommorow () {
                 posterImage: BlackWidowPoster,
                 date: '23.08.2021',
                 time: '16:00',
+                id: 10,
             },
             {
                 posterImage: BlackWidowPoster,
                 date: '23.08.2021',
                 time: '18:00',
+                id: 11,
             },
             {
                 posterImage: BlackWidowPoster,
                 date: '23.08.2021',
                 time: '20:00',
+                id: 12,
             },
         ] 
     ])
@@ -49,7 +54,7 @@ export function Tommorow () {
                 <Row>
                     {
                         _.map(posters, (poster) => {
-                            return <Poster poster={poster} />
+                            return <Poster poster={poster} key={poster.id}/>
                         })
                     }
                 </Row>

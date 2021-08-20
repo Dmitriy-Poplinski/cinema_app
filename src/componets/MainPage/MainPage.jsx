@@ -64,12 +64,6 @@ export function MainPage () {
         },
     ])
 
-    function Items () {
-        return _.map(premieres, (premiere) => {
-            return <PremierePoster premiere={premiere}/>
-        })
-    }
-
     return (
         <Container>
             <Row>
@@ -86,7 +80,7 @@ export function MainPage () {
                         />
                         <Carousel.Caption>
                             <Button variant="info" style={styleTitle}>Детальніше</Button>
-                            <p style={styleParag}>What is</p>
+                            <p style={styleParag}>Прем'єра Чорна вдова</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item interval={1000}>
@@ -98,7 +92,7 @@ export function MainPage () {
                         />
                         <Carousel.Caption>
                             <Button variant="info" style={styleTitle}>Детальніше</Button>
-                            <p style={styleParag}>What is</p>
+                            <p style={styleParag}>Прем'єра Чорна вдова</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item interval={1000}>
@@ -110,10 +104,9 @@ export function MainPage () {
                         />
                         <Carousel.Caption>
                             <Button variant="info" style={styleTitle}>Детальніше</Button>
-                            <p style={styleParag}>What is</p>
+                            <p style={styleParag}>Прем'єра Чорна вдова</p>
                         </Carousel.Caption>
                     </Carousel.Item>
-                    {/* {Items()} */}
                 </Carousel>
             </Row>
         </Container>

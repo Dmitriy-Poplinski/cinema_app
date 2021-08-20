@@ -11,16 +11,19 @@ export function Today () {
                 posterImage: BlackWidowPoster,
                 date: '22.08.2021',
                 time: '10:00',
+                id: 1,
             },
             {
                 posterImage: BlackWidowPoster,
                 date: '22.08.2021',
                 time: '12:00',
+                id: 2,
             },
             {
                 posterImage: BlackWidowPoster,
                 date: '22.08.2021',
                 time: '14:00',
+                id: 3,
             },
         ],
         [
@@ -28,16 +31,19 @@ export function Today () {
                 posterImage: BlackWidowPoster,
                 date: '22.08.2021',
                 time: '16:00',
+                id: 4,
             },
             {
                 posterImage: BlackWidowPoster,
                 date: '22.08.2021',
                 time: '18:00',
+                id: 5,
             },
             {
                 posterImage: BlackWidowPoster,
                 date: '22.08.2021',
                 time: '20:00',
+                id: 6,
             },
         ] 
     ])
@@ -48,7 +54,7 @@ export function Today () {
                 <Row>
                     {
                         _.map(posters, (poster) => {
-                            return <Poster poster={poster}/>
+                            return <Poster poster={poster} key={poster.id}/>
                         })
                     }
                 </Row>
