@@ -1,5 +1,4 @@
 import {Button , Col} from 'react-bootstrap'
-import BlackWidowPoster from './../../assets/images/Black_widow.jpg'
 import styled from 'styled-components';
 
 const styleCol = {

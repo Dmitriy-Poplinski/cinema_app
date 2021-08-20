@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import { Provider } from 'react-redux';
 import { Header } from './componets/Header/Header';
 import { BrowserRouter, Route, Redirect } from 'react-router-dom';
 import { About } from './componets/About/About';
@@ -9,6 +10,7 @@ import { Today } from './componets/Today/Today';
 import { Tommorow } from './componets/Tommorow/Tommorow';
 import { MainPage } from './componets/MainPage/MainPage';
 import { ModalDate } from './componets/ModalDate/ModalDate';
+import store from './redux/store';
 
 const AppWrapper = styled.div`
 position: relative;
@@ -27,25 +29,27 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
-      <Container>
-        <AppWrapper>
-          <Row><Header redirectToMain={redirectToMain} redirectToDate={redirectToDate}/></Row>
-          <Row>
-            <Route exact path='/' component={MainPage}/> 
-            <Route exact path='/about' component={About}/>
-            <Route exact path='/today' component={Today}/>
-            <Route exact path='/tommorow' component={Tommorow}/>
-            <Route exact path='/date'> 
-              {date ? <Redirect to="/" /> : <MainPage><ModalDate /></MainPage>}
-            </Route>
-          </Row>
-          <Row>
-            <Footer />
-          </Row>
-        </AppWrapper>
-      </Container>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Container>
+          <AppWrapper>
+            <Row><Header redirectToMain={redirectToMain} redirectToDate={redirectToDate}/></Row>
+            <Row>
+              <Route exact path='/' component={MainPage}/> 
+              <Route exact path='/about' component={About}/>
+              <Route exact path='/today' component={Today}/>
+              <Route exact path='/tommorow' component={Tommorow}/>
+              <Route exact path='/date'> 
+                {date ? <Redirect to="/" /> : <MainPage><ModalDate /></MainPage>}
+              </Route>
+            </Row>
+            <Row>
+              <Footer />
+            </Row>
+          </AppWrapper>
+        </Container>
+      </BrowserRouter>
+    </Provider>
   );
 }
 

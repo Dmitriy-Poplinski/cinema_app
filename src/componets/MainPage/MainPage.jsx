@@ -4,6 +4,7 @@ import { PremierePoster } from "../PremierePoster/PremierePoster"
 import BlackWidowPoster from './../../assets/images/Black_widow.jpg'
 import {useState} from 'react'
 import * as _ from 'lodash'
+import { useSelector } from 'react-redux';
 
 const TitleWrapper = styled.div`
 margin-top: 80px;
@@ -43,38 +44,7 @@ const styleParag = {
 }
 
 export function MainPage () {
-    const [premieres, setPremieres] = useState([
-        {
-            posterImage: BlackWidowPoster,
-            altText: 'BlackWidow',
-            interval: 1000,
-            text: 'Nulla vitae elit libero, a pharetra augue mollis interdum.'
-        },
-        {
-            posterImage: BlackWidowPoster,
-            altText: 'BlackWidow',
-            interval: 500,
-            text: 'Nulla vitae elit libero, a pharetra augue mollis interdum.'
-        },
-        {
-            posterImage: BlackWidowPoster,
-            altText: 'BlackWidow',
-            interval: 200,
-            text: 'Nulla vitae elit libero, a pharetra augue mollis interdum.'
-        },
-        {
-            posterImage: BlackWidowPoster,
-            altText: 'BlackWidow',
-            interval: 300,
-            text: 'Nulla vitae elit libero, a pharetra augue mollis interdum.'
-        },
-        {
-            posterImage: BlackWidowPoster,
-            altText: 'BlackWidow',
-            interval: 400,
-            text: 'Nulla vitae elit libero, a pharetra augue mollis interdum.'
-        },
-    ])
+    const state = useSelector(state => state.premieres)
 
     return (
         <Container style={containerStyle}>

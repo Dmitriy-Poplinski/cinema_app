@@ -1,60 +1,18 @@
 import styled from 'styled-components'
-import {Container, Row, Col} from 'react-bootstrap'
-import {useState} from 'react'
-import BlackWidowPoster from './../../assets/images/Black_widow.jpg'
+import {Container, Row} from 'react-bootstrap'
 import { Poster } from '../Poster/Poster'
 import * as _ from 'lodash'
+import { useSelector } from 'react-redux';
 
 const RowWrapper = styled.div`
 margin-top: 100px;
 `
 
 export function Tommorow () {
-    const [data, setPosters] = useState([
-        [
-            {
-                posterImage: BlackWidowPoster,
-                date: '23.08.2021',
-                time: '10:00',
-                id: 7,
-            },
-            {
-                posterImage: BlackWidowPoster,
-                date: '23.08.2021',
-                time: '12:00',
-                id: 8,
-            },
-            {
-                posterImage: BlackWidowPoster,
-                date: '23.08.2021',
-                time: '14:00',
-                id: 9,
-            },
-        ],
-        [
-            {
-                posterImage: BlackWidowPoster,
-                date: '23.08.2021',
-                time: '16:00',
-                id: 10,
-            },
-            {
-                posterImage: BlackWidowPoster,
-                date: '23.08.2021',
-                time: '18:00',
-                id: 11,
-            },
-            {
-                posterImage: BlackWidowPoster,
-                date: '23.08.2021',
-                time: '20:00',
-                id: 12,
-            },
-        ] 
-    ])
+    const state = useSelector(state => state.filmsTommorow)
 
     function Items () {
-        return _.map(data, (posters) => {
+        return _.map(state, (posters) => {
             return (
                 <Row>
                     {
