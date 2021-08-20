@@ -1,8 +1,5 @@
 import { Container, Row, Carousel, Button } from "react-bootstrap"
 import styled from 'styled-components'
-import { PremierePoster } from "../PremierePoster/PremierePoster"
-import BlackWidowPoster from './../../assets/images/Black_widow.jpg'
-import {useState} from 'react'
 import * as _ from 'lodash'
 import { useSelector } from 'react-redux';
 
@@ -24,7 +21,7 @@ const containerStyle={
 
 const styleImg = {
     height: '900px',
-    margin: '0 auto'
+    margin: '0 auto',
 }
 
 const styleTitle = {
@@ -46,50 +43,35 @@ const styleParag = {
 export function MainPage () {
     const state = useSelector(state => state.premieres)
 
+    function Items () {
+        return _.map(state, (state) => {
+            return (
+                <Carousel.Item interval={1000}>
+                    <img
+                        style={styleImg}
+                        className="d-block w-70"
+                        src={state.posterImage}
+                        alt={'No'}
+                        />
+                    <Carousel.Caption>
+                        <Button variant="info" style={styleTitle}><TextWrapper>Детальніше</TextWrapper></Button>
+                        <p style={styleParag}><TextWrapper>Прем'єра Чорна вдова</TextWrapper></p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+            )
+        })
+    }
+
     return (
         <Container style={containerStyle}>
             <Row>
                <TitleWrapper>Прем'єри</TitleWrapper> 
             </Row>
             <Row>
-                <Carousel>
-                    <Carousel.Item interval={1000}>
-                        <img
-                            style={styleImg}
-                            className="d-block w-70"
-                            src={BlackWidowPoster}
-                            alt={'No'}
-                        />
-                        <Carousel.Caption>
-                            <Button variant="info" style={styleTitle}><TextWrapper>Детальніше</TextWrapper></Button>
-                            <p style={styleParag}><TextWrapper>Прем'єра Чорна вдова</TextWrapper></p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item interval={1000}>
-                        <img
-                            style={styleImg}
-                            className="d-block w-70"
-                            src={BlackWidowPoster}
-                            alt={'No'}
-                        />
-                        <Carousel.Caption>
-                            <Button variant="info" style={styleTitle}><TextWrapper>Детальніше</TextWrapper></Button>
-                            <p style={styleParag}><TextWrapper>Прем'єра Чорна вдова</TextWrapper></p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item interval={1000}>
-                        <img
-                            style={styleImg}
-                            className="d-block w-70"
-                            src={BlackWidowPoster}
-                            alt={'No'}
-                        />
-                        <Carousel.Caption>
-                            <Button variant="info" style={styleTitle}><TextWrapper>Детальніше</TextWrapper></Button>
-                            <p style={styleParag}><TextWrapper>Прем'єра Чорна вдова</TextWrapper></p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                </Carousel>
+                
+                 <Carousel>
+                    {Items()}
+                </Carousel> 
             </Row>
         </Container>
     )

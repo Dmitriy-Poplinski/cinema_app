@@ -32,6 +32,12 @@ export const defaultState = {
             interval: 400,
             text: 'Nulla vitae elit libero, a pharetra augue mollis interdum.'
         },
+        {
+            posterImage: BlackWidowPoster,
+            altText: 'BlackWidow',
+            interval: 400,
+            text: 'Nulla vitae elit libero, a pharetra augue mollis interdum.'
+        },
     ],
     filmsToday: [
         [
