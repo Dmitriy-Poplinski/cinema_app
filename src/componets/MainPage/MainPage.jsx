@@ -1,6 +1,5 @@
 import { Container, Row, Carousel, Button } from "react-bootstrap"
 import styled from 'styled-components'
-import * as _ from 'lodash'
 import { useSelector } from 'react-redux';
 
 const TitleWrapper = styled.div`
@@ -44,7 +43,7 @@ export function MainPage () {
     const state = useSelector(state => state.premieres)
 
     function Items () {
-        return _.map(state, (state) => {
+        return state.map((state) => {
             return (
                 <Carousel.Item interval={state.interval}>
                     <img

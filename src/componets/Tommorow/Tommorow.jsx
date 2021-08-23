@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import {Container, Row} from 'react-bootstrap'
 import { Poster } from '../Poster/Poster'
-import * as _ from 'lodash'
 import { useSelector } from 'react-redux';
 
 const RowWrapper = styled.div`
@@ -12,11 +11,11 @@ export function Tommorow () {
     const state = useSelector(state => state.filmsTommorow)
 
     function Items () {
-        return _.map(state, (posters) => {
+        return state.map((posters) => {
             return (
                 <Row>
                     {
-                        _.map(posters, (poster) => {
+                        posters.map((poster) => {
                             return <Poster poster={poster} key={poster.id}/>
                         })
                     }
