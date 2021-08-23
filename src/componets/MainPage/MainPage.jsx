@@ -46,16 +46,16 @@ export function MainPage () {
     function Items () {
         return _.map(state, (state) => {
             return (
-                <Carousel.Item interval={1000}>
+                <Carousel.Item interval={state.interval}>
                     <img
                         style={styleImg}
                         className="d-block w-70"
                         src={state.posterImage}
-                        alt={'No'}
+                        alt={state.altText}
                         />
                     <Carousel.Caption>
                         <Button variant="info" style={styleTitle}><TextWrapper>Детальніше</TextWrapper></Button>
-                        <p style={styleParag}><TextWrapper>Прем'єра Чорна вдова</TextWrapper></p>
+                        <p style={styleParag}><TextWrapper>{state.text}</TextWrapper></p>
                     </Carousel.Caption>
                 </Carousel.Item>
             )

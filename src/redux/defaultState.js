@@ -6,37 +6,37 @@ export const defaultState = {
             posterImage: BlackWidowPoster,
             altText: 'BlackWidow',
             interval: 1000,
-            text: 'Nulla vitae elit libero, a pharetra augue mollis interdum.'
+            text: 'Чорна вдова Прем\'єра'
         },
         {
             posterImage: BlackWidowPoster,
             altText: 'BlackWidow',
             interval: 500,
-            text: 'Nulla vitae elit libero, a pharetra augue mollis interdum.'
+            text: 'Чорна вдова Прем\'єра'
         },
         {
             posterImage: BlackWidowPoster,
             altText: 'BlackWidow',
             interval: 200,
-            text: 'Nulla vitae elit libero, a pharetra augue mollis interdum.'
+            text: 'Чорна вдова Прем\'єра'
         },
         {
             posterImage: BlackWidowPoster,
             altText: 'BlackWidow',
             interval: 300,
-            text: 'Nulla vitae elit libero, a pharetra augue mollis interdum.'
+            text: 'Чорна вдова Прем\'єра'
         },
         {
             posterImage: BlackWidowPoster,
             altText: 'BlackWidow',
             interval: 400,
-            text: 'Nulla vitae elit libero, a pharetra augue mollis interdum.'
+            text: 'Чорна вдова Прем\'єра'
         },
         {
             posterImage: BlackWidowPoster,
             altText: 'BlackWidow',
             interval: 400,
-            text: 'Nulla vitae elit libero, a pharetra augue mollis interdum.'
+            text: 'Чорна вдова Прем\'єра'
         },
     ],
     filmsToday: [
