@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import styled from 'styled-components'
 import {Navbar} from 'react-bootstrap'
 import {Nav} from 'react-bootstrap'
-import { ModalDate } from '../ModalDate/ModalDate';
+import { ModalDate } from './ModalDate';
 
 const Logo = styled.div`
 margin-left: 20px;
