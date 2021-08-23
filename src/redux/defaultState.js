@@ -11,35 +11,35 @@ export const defaultState = {
         {
             posterImage: BlackWidowPoster,
             altText: 'BlackWidow',
-            interval: 500,
+            interval: 1500,
             text: 'Чорна вдова Прем\'єра'
         },
         {
             posterImage: BlackWidowPoster,
             altText: 'BlackWidow',
-            interval: 200,
+            interval: 1200,
             text: 'Чорна вдова Прем\'єра'
         },
         {
             posterImage: BlackWidowPoster,
             altText: 'BlackWidow',
-            interval: 300,
+            interval: 1300,
             text: 'Чорна вдова Прем\'єра'
         },
         {
             posterImage: BlackWidowPoster,
             altText: 'BlackWidow',
-            interval: 400,
+            interval: 1400,
             text: 'Чорна вдова Прем\'єра'
         },
         {
             posterImage: BlackWidowPoster,
             altText: 'BlackWidow',
-            interval: 400,
+            interval: 2000,
             text: 'Чорна вдова Прем\'єра'
         },
     ],
-    filmsToday: [
+    'aug_23': [
         {
             posterImage: BlackWidowPoster,
             date: '22.08.2021',
@@ -77,7 +77,7 @@ export const defaultState = {
             id: 6,
         },
     ],
-    filmsTommorow: [
+    'aug_24': [
         {
             posterImage: BlackWidowPoster,
             date: '23.08.2021',
@@ -113,6 +113,86 @@ export const defaultState = {
             date: '23.08.2021',
             time: '20:00',
             id: 12,
+        },
+    ],
+    'aug_25': [
+        {
+            posterImage: BlackWidowPoster,
+            date: '23.08.2021',
+            time: '10:00',
+            id: 7,
+        },
+        {
+            posterImage: BlackWidowPoster,
+            date: '23.08.2021',
+            time: '12:00',
+            id: 8,
+        },
+        {
+            posterImage: BlackWidowPoster,
+            date: '23.08.2021',
+            time: '14:00',
+            id: 9,
+        },
+    ],
+    'aug_26': [
+        {
+            posterImage: BlackWidowPoster,
+            date: '23.08.2021',
+            time: '10:00',
+            id: 7,
+        },
+        {
+            posterImage: BlackWidowPoster,
+            date: '23.08.2021',
+            time: '12:00',
+            id: 8,
+        },
+        {
+            posterImage: BlackWidowPoster,
+            date: '23.08.2021',
+            time: '14:00',
+            id: 9,
+        },
+    ],
+    'aug_27': [
+        {
+            posterImage: BlackWidowPoster,
+            date: '23.08.2021',
+            time: '10:00',
+            id: 7,
+        },
+        {
+            posterImage: BlackWidowPoster,
+            date: '23.08.2021',
+            time: '12:00',
+            id: 8,
+        },
+        {
+            posterImage: BlackWidowPoster,
+            date: '23.08.2021',
+            time: '14:00',
+            id: 9,
+        },
+    ],
+    'aug_28': [
+        {
+            posterImage: BlackWidowPoster,
+            date: '23.08.2021',
+            time: '10:00',
+            id: 7,
+        },
+        {
+            posterImage: BlackWidowPoster,
+            date: '23.08.2021',
+            time: '12:00',
+            id: 8,
+        },
+        {
+            posterImage: BlackWidowPoster,
+            date: '23.08.2021',
+            time: '14:00',
+            id: 9,
         },
     ]
 }

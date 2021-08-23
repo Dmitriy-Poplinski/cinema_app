@@ -7,10 +7,12 @@ import {
 } from '@material-ui/pickers'
 
 export const MaterialUIPickers = () => {
-  const [selectedDate, setSelectedDate] = useState(new Date('2021-08-23T21:11:54'))
+  const [selectedDate, setSelectedDate] = useState(new Date('2021-08-23'))
 
   const handleDateChange = (date) => {
-    setSelectedDate(date)
+    const selectedDate = date._d.toString().toLowerCase().substr(4, 3) + '-' + date._d.toString().toLowerCase().substr(8, 3)
+    console.log(selectedDate)
+    setSelectedDate(selectedDate)
   }
 
   return (

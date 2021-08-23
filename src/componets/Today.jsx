@@ -4,7 +4,7 @@ import { Poster } from './Poster'
 import { useSelector } from 'react-redux'
 
 export const Today = () => {
-    const state = useSelector(state => state.filmsToday)
+    const state = useSelector(state => state.aug_23)
 
     const Items = () => (state.map((posters) => (
         <Poster poster={posters} key={posters.id}/>
