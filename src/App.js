@@ -4,18 +4,13 @@ import { Header } from './componets/Header';
 import { BrowserRouter, Route, Redirect } from 'react-router-dom';
 import { About } from './componets/About';
 import { Footer } from './componets/Footer';
-import styled from 'styled-components'
 import {Container, Row} from 'react-bootstrap'
 import { Today } from './componets/Today';
 import { Tommorow } from './componets/Tommorow';
 import { MainPage } from './componets/MainPage';
 import { ModalDate } from './componets/ModalDate';
+import { AppWrapper } from './styled/Common.style';
 import store from './redux/store';
-
-const AppWrapper = styled.div`
-position: relative;
-height: 100%;
-`
 
 function App() {
   const [date, setDate] = useState(false)

@@ -7,16 +7,16 @@ export const Today = () => {
     const state = useSelector(state => state.filmsToday)
 
     const Items = () => (state.map((posters) => (
-        <Row>
-            {
-                posters.map((poster) => <Poster poster={poster} key={poster.id}/>)
-            }
-        </Row>
+        <Poster poster={posters} key={posters.id}/>
     )))
 
     return (
         <Container>
-            <RowWrapper>{Items()}</RowWrapper>
+            <RowWrapper>
+                <Row>
+                    {Items()}
+                </Row>
+            </RowWrapper>
         </Container>
     )
 }

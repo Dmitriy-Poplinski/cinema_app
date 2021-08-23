@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const FooterWrapper = styled.div`
-margin-left: 10px;
-margin-top: 50px;
+margin: 50px auto;
 `
 
 export const FooterInner = styled.div`
@@ -17,5 +16,5 @@ align-items: center;
 `
 
 export const FooterCopy = styled.span`
-margin-left: 20px;
+margin: 50px auto;
 `
