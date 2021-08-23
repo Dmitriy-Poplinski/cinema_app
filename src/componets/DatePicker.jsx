@@ -10,8 +10,8 @@ export const MaterialUIPickers = () => {
   const [selectedDate, setSelectedDate] = useState(new Date('2021-08-23'))
 
   const handleDateChange = (date) => {
-    const selectedDate = date._d.toString().toLowerCase().substr(4, 3) + '-' + date._d.toString().toLowerCase().substr(8, 3)
-    console.log(selectedDate)
+    const stringDate = date._d.toString().toLowerCase()
+    const selectedDate = `${stringDate.substr(4, 3)}_${stringDate.substr(8, 2)}`
     setSelectedDate(selectedDate)
   }
 
