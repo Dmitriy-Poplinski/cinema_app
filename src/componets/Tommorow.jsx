@@ -1,7 +1,7 @@
 import { RowWrapper } from '../styled/Common.style.jsx'
 import {Container, Row} from 'react-bootstrap'
 import { Poster } from './Poster'
-import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux'
 
 export const Tommorow = () => {
     const state = useSelector(state => state.filmsTommorow)

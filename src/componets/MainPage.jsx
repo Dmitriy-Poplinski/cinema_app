@@ -1,5 +1,5 @@
-import { Container, Row, Carousel, Button } from "react-bootstrap"
-import { useSelector } from 'react-redux';
+import { Container, Row, Carousel, Button } from 'react-bootstrap'
+import { useSelector } from 'react-redux'
 import {
     MainPageTitleWrapper, 
     MainPageTextWrapper, 
