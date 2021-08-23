@@ -27,7 +27,7 @@ cursor: pointer;
 `
 
 
-export function Header (props) {
+export const Header = (props) => {
     const [show, setShow] = useState(false);
 
     const handleClose = () => {

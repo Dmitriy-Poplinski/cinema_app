@@ -39,12 +39,10 @@ const styleParag = {
     marginTop: '20px'
 }
 
-export function MainPage () {
+export const MainPage = () => {
     const state = useSelector(state => state.premieres)
 
-    function Items () {
-        return state.map((state) => {
-            return (
+    const Items = () => (state.map((state) => (
                 <Carousel.Item interval={state.interval}>
                     <img
                         style={styleImg}
@@ -58,8 +56,8 @@ export function MainPage () {
                     </Carousel.Caption>
                 </Carousel.Item>
             )
-        })
-    }
+        )
+    )
 
     return (
         <Container style={containerStyle}>

@@ -20,12 +20,10 @@ const Copy = styled.span`
 margin-left: 20px;
 `
 
-export function Footer () {
-    return (
-        <FooterWrapper>
-            <FooterInner>
-                <Copy>&copy;Cinema</Copy>
-            </FooterInner>
-        </FooterWrapper>    
-    )
-}
+export const Footer = () => (
+    <FooterWrapper>
+        <FooterInner>
+            <Copy>&copy;Cinema</Copy>
+        </FooterInner>
+    </FooterWrapper>    
+)

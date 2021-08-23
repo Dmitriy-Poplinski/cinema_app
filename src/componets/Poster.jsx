@@ -28,14 +28,12 @@ margin-top: 30px;
 font-size: 25px;
 `
 
-export function Poster (props) {
-    return (
-        <Col style={styleCol}>
-            <img src={props.poster.posterImage} style={styleImg} alt='Постера ещё нет'/>
-            <TimeWrapper>
-                <span>{props.poster.date}</span><span>{props.poster.time}</span>
-            </TimeWrapper>
-            <Button variant="info" style={styleButton}>Детальніше</Button>
-        </Col>
-    )
-}
+export const Poster = (props) => (
+    <Col style={styleCol}>
+        <img src={props.poster.posterImage} style={styleImg} alt='Постера ещё нет'/>
+        <TimeWrapper>
+            <span>{props.poster.date}</span><span>{props.poster.time}</span>
+        </TimeWrapper>
+        <Button variant="info" style={styleButton}>Детальніше</Button>
+    </Col>
+)

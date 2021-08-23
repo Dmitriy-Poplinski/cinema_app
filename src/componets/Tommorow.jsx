@@ -7,22 +7,16 @@ const RowWrapper = styled.div`
 margin-top: 100px;
 `
 
-export function Tommorow () {
+export const Tommorow = () => {
     const state = useSelector(state => state.filmsTommorow)
 
-    function Items () {
-        return state.map((posters) => {
-            return (
-                <Row>
-                    {
-                        posters.map((poster) => {
-                            return <Poster poster={poster} key={poster.id}/>
-                        })
-                    }
-                </Row>
-            )
-        })
-    }
+    const Items = () => (state.map((posters) => (
+        <Row>
+            {
+                posters.map((poster) => <Poster poster={poster} key={poster.id}/>)
+            }
+        </Row>
+    )))
 
 
     return (
