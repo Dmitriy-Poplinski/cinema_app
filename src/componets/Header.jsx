@@ -1,31 +1,9 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom';
-import styled from 'styled-components'
 import {Navbar} from 'react-bootstrap'
 import {Nav} from 'react-bootstrap'
 import { ModalDate } from './ModalDate';
-
-const Logo = styled.div`
-margin-left: 20px;
-font-size: 30px;
-text-align: center;
-@media (max-width: 320px) {
-    font-size: 16px;
-}
-`
-
-const HeaderMenuWrapper = styled.div`
-display: flex;
-font-size: 20px;
-margin-left: auto;
-align-items: center;
-`
-
-const HeaderMenuItem = styled.div`
-padding: 20px;
-cursor: pointer;
-`
-
+import { HeaderLogo, HeaderMenuWrapper, HeaderMenuItem } from '../styled/Header.style';
 
 export const Header = (props) => {
     const [show, setShow] = useState(false);
@@ -44,9 +22,9 @@ export const Header = (props) => {
     return (
         <Navbar bg="dark" variant="dark" expand="lg" fixed='top' collapseOnSelect>
                 <Navbar.Brand href="#home" >
-                    <Logo>
+                    <HeaderLogo>
                         <NavLink to='/'>Cinema App</NavLink>
-                    </Logo>
+                    </HeaderLogo>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls='responsive-navbar-nav'/>
                 <Navbar.Collapse className='mr-2'>

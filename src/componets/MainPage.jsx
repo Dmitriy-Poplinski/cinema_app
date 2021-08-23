@@ -1,58 +1,29 @@
 import { Container, Row, Carousel, Button } from "react-bootstrap"
-import styled from 'styled-components'
 import { useSelector } from 'react-redux';
-
-const TitleWrapper = styled.div`
-margin-top: 80px;
-text-align: center;
-font-size: 40px
-`
-
-const TextWrapper = styled.span`
-@media (max-width: 700px) {
-    font-size: 16px;
-}
-`
-
-const containerStyle={
-    marginTop: '50px',
-}
-
-const styleImg = {
-    height: '900px',
-    margin: '0 auto',
-}
-
-const styleTitle = {
-    width: '60%',
-    padding: '20px',
-    fontSize: '40px'
-}
-
-const styleParag = {
-    marginRight: 'auto',
-    marginLeft: 'auto',
-    width: '60%',
-    padding: '20px',
-    fontSize: '30px',
-    backgroundColor: '#ccc',
-    marginTop: '20px'
-}
+import {
+    MainPageTitleWrapper, 
+    MainPageTextWrapper, 
+    InnerContainerStyle,
+    MainPageImg,
+    MainPageParagraph,
+    MainPageButtonWrapper
+} from './../styled/MainPage.style.jsx'
 
 export const MainPage = () => {
     const state = useSelector(state => state.premieres)
 
     const Items = () => (state.map((state) => (
                 <Carousel.Item interval={state.interval}>
-                    <img
-                        style={styleImg}
+                    <MainPageImg
                         className="d-block w-70"
                         src={state.posterImage}
                         alt={state.altText}
                         />
                     <Carousel.Caption>
-                        <Button variant="info" style={styleTitle}><TextWrapper>Детальніше</TextWrapper></Button>
-                        <p style={styleParag}><TextWrapper>{state.text}</TextWrapper></p>
+                        <MainPageButtonWrapper>
+                            <Button variant="info"><MainPageTextWrapper>Детальніше</MainPageTextWrapper></Button>    
+                        </MainPageButtonWrapper>
+                        <MainPageParagraph><MainPageTextWrapper>{state.text}</MainPageTextWrapper></MainPageParagraph>
                     </Carousel.Caption>
                 </Carousel.Item>
             )
@@ -60,9 +31,10 @@ export const MainPage = () => {
     )
 
     return (
-        <Container style={containerStyle}>
+        <Container>
+            <InnerContainerStyle>
             <Row>
-               <TitleWrapper>Прем'єри</TitleWrapper> 
+               <MainPageTitleWrapper>Прем'єри</MainPageTitleWrapper> 
             </Row>
             <Row>
                 
@@ -70,6 +42,7 @@ export const MainPage = () => {
                     {Items()}
                 </Carousel> 
             </Row>
+            </InnerContainerStyle>
         </Container>
     )
 }

@@ -1,39 +1,16 @@
 import {Button , Col} from 'react-bootstrap'
-import styled from 'styled-components';
-
-const styleCol = {
-    height: '600px',
-    backgroundColor: '#ccc',
-    margin: '20px',
-}
-
-const styleImg = {
-    width: '100%',
-    height: '400px',
-    marginTop: '10px',
-    border: 'none',
-    outline: 'none'
-}
-
-const styleButton = {
-    width: '180px',
-    marginTop: '50px',
-
-}
-
-const TimeWrapper = styled.div`
-display: flex;
-justify-content: space-between;
-margin-top: 30px;
-font-size: 25px;
-`
+import { PosterImg, PosterStyledButton, PosterStyledColumn, PosterTimeWrapper } from '../styled/Poster.style.jsx';
 
 export const Poster = (props) => (
-    <Col style={styleCol}>
-        <img src={props.poster.posterImage} style={styleImg} alt='Постера ещё нет'/>
-        <TimeWrapper>
-            <span>{props.poster.date}</span><span>{props.poster.time}</span>
-        </TimeWrapper>
-        <Button variant="info" style={styleButton}>Детальніше</Button>
+    <Col>
+        <PosterStyledColumn>
+            <PosterImg src={props.poster.posterImage} alt='Постера ещё нет'/>
+            <PosterTimeWrapper>
+                <span>{props.poster.date}</span><span>{props.poster.time}</span>
+            </PosterTimeWrapper>
+            <PosterStyledButton>
+                <Button variant="info">Детальніше</Button>
+            </PosterStyledButton>
+        </PosterStyledColumn>
     </Col>
 )

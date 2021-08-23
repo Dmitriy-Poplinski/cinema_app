@@ -1,11 +1,7 @@
-import styled from 'styled-components'
+import { RowWrapper } from '../styled/Common.style.jsx'
 import {Container, Row} from 'react-bootstrap'
 import { Poster } from './Poster'
 import { useSelector } from 'react-redux';
-
-const RowWrapper = styled.div`
-margin-top: 100px;
-`
 
 export const Tommorow = () => {
     const state = useSelector(state => state.filmsTommorow)
@@ -17,7 +13,6 @@ export const Tommorow = () => {
             }
         </Row>
     )))
-
 
     return (
         <Container>
