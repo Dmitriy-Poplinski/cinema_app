@@ -2,9 +2,9 @@ import { Modal, Button } from 'react-bootstrap'
 
 import { MaterialUIPickers } from './DatePicker';
 
-export const ModalDate = (props) => (
+export const ModalDate = ({show, handleClose}) => (
     <>
-        <Modal show={props.show} onHide={props.handleClose}>
+        <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
                 <Modal.Title>Підберіть дату</Modal.Title>
             </Modal.Header>
@@ -12,10 +12,10 @@ export const ModalDate = (props) => (
                 <MaterialUIPickers />
             </Modal.Body>
             <Modal.Footer>
-                <Button variant="secondary" onClick={props.handleClose}>
+                <Button variant="secondary" onClick={handleClose}>
                     Закрити 
                 </Button>
-                <Button variant="primary" onClick={props.handleClose}>
+                <Button variant="primary" onClick={handleClose}>
                     Пітвердити
                 </Button>
             </Modal.Footer>
