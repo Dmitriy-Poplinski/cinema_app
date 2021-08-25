@@ -1,47 +1,59 @@
 import BlackWidowPoster from './../assets/images/Black_widow.jpg'
+import Countdown from './../assets/images/Countdown.jpg'
+import Tenet from './../assets/images/Tenet.jpg'
+import AvengersEndgame from './../assets/images/Avengers_endgame.jpg'
+import OutOfTime from './../assets/images/Out_of_time.jpg'
+import GreenMile from './../assets/images/Green_mile.jpg'
+import ShawshankRedemption from './../assets/images/Shawshank_redemption.jpeg'
 
 export const defaultState = {
     premieres: [
         {
             posterImage: BlackWidowPoster,
-            altText: 'BlackWidow',
+            altText: 'Black Widow',
             interval: 1000,
             text: 'Чорна вдова Прем\'єра'
         },
         {
-            posterImage: BlackWidowPoster,
-            altText: 'BlackWidow',
+            posterImage: Countdown,
+            altText: 'Countdown',
             interval: 1500,
-            text: 'Чорна вдова Прем\'єра'
+            text: 'Зворотній відлік Прем\'єра'
         },
         {
-            posterImage: BlackWidowPoster,
-            altText: 'BlackWidow',
+            posterImage: ShawshankRedemption,
+            altText: 'Shawsahnk Redemption',
             interval: 1200,
-            text: 'Чорна вдова Прем\'єра'
+            text: 'Побіг з Шоушенку Прем\'єра'
         },
         {
-            posterImage: BlackWidowPoster,
-            altText: 'BlackWidow',
+            posterImage: Tenet,
+            altText: 'Tenet',
             interval: 1300,
-            text: 'Чорна вдова Прем\'єра'
+            text: 'Тенет Прем\'єра'
         },
         {
-            posterImage: BlackWidowPoster,
-            altText: 'BlackWidow',
+            posterImage: AvengersEndgame,
+            altText: 'Avengers Endgame',
             interval: 1400,
-            text: 'Чорна вдова Прем\'єра'
+            text: 'Месники. Фінал Прем\'єра'
         },
         {
-            posterImage: BlackWidowPoster,
-            altText: 'BlackWidow',
+            posterImage: OutOfTime,
+            altText: 'Out of time',
             interval: 2000,
-            text: 'Чорна вдова Прем\'єра'
+            text: 'За межами часу Прем\'єра'
+        },
+        {
+            posterImage: GreenMile,
+            altText: 'Green mile',
+            interval: 2000,
+            text: 'Зелена миля Прем\'єра'
         },
     ],
     'aug_23': [
         {
-            posterImage: BlackWidowPoster,
+            posterImage: GreenMile,
             date: '22.08.2021',
             time: '10:00',
             id: 1,
@@ -53,25 +65,19 @@ export const defaultState = {
             id: 2,
         },
         {
-            posterImage: BlackWidowPoster,
+            posterImage: AvengersEndgame,
             date: '22.08.2021',
             time: '14:00',
             id: 3,
         },
         {
-            posterImage: BlackWidowPoster,
-            date: '22.08.2021',
-            time: '16:00',
-            id: 4,
-        },
-        {
-            posterImage: BlackWidowPoster,
+            posterImage: Tenet,
             date: '22.08.2021',
             time: '18:00',
             id: 5,
         },
         {
-            posterImage: BlackWidowPoster,
+            posterImage: Countdown,
             date: '22.08.2021',
             time: '20:00',
             id: 6,
@@ -79,13 +85,13 @@ export const defaultState = {
     ],
     'aug_24': [
         {
-            posterImage: BlackWidowPoster,
+            posterImage: AvengersEndgame,
             date: '23.08.2021',
             time: '10:00',
             id: 7,
         },
         {
-            posterImage: BlackWidowPoster,
+            posterImage: GreenMile,
             date: '23.08.2021',
             time: '12:00',
             id: 8,
@@ -97,19 +103,19 @@ export const defaultState = {
             id: 9,
         },
         {
-            posterImage: BlackWidowPoster,
+            posterImage: GreenMile,
             date: '23.08.2021',
             time: '16:00',
             id: 10,
         },
         {
-            posterImage: BlackWidowPoster,
+            posterImage: Countdown,
             date: '23.08.2021',
             time: '18:00',
             id: 11,
         },
         {
-            posterImage: BlackWidowPoster,
+            posterImage: Tenet,
             date: '23.08.2021',
             time: '20:00',
             id: 12,

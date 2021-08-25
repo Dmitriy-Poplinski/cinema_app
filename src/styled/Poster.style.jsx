@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
 export const PosterStyledColumn = styled.div`
+width: 400px;
 height: 600px;
+margin-right: auto;
+margin-left: auto;
 background-color: #ccc;
 padding-left: 20px;
 padding-right: 20px;
