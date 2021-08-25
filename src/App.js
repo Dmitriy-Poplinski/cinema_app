@@ -5,14 +5,14 @@ import { Row } from 'react-bootstrap'
 import store from './redux/store'
 import { Header, About, Footer, Today, Tommorow, MainPage, ModalDate, AppWrapper } from './componets/index.js'
 
-function App() {
+const  App = () => {
   const [date, setDate] = useState(false)
 
-  function redirectToMain () {
+  const redirectToMain = () => {
     setDate(true)
   }
 
-  function redirectToDate () {
+  const redirectToDate = () => {
     setDate(false)
   }
 
