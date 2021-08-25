@@ -1,5 +1,5 @@
 import { Container, Row, Carousel, Button } from 'react-bootstrap'
-import { useSelector } from 'react-redux'
+import { useSelector, connect } from 'react-redux'
 import {
     MainPageTitleWrapper, 
     MainPageTextWrapper, 
@@ -9,7 +9,7 @@ import {
     MainPageButtonWrapper
 } from './../styled/MainPage.style.jsx'
 
-export const MainPage = () => {
+const MainPage = () => {
     const state = useSelector(state => state.premieres)
 
     const Items = () => (state.map((state) => (
@@ -46,3 +46,5 @@ export const MainPage = () => {
         </Container>
     )
 }
+
+export default connect(null, null)(MainPage)

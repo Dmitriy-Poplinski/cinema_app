@@ -1,9 +1,9 @@
 import { RowWrapper } from '../styled/Common.style.jsx'
 import {Container, Row} from 'react-bootstrap'
 import { Poster } from './Poster'
-import { useSelector } from 'react-redux'
+import { useSelector, connect } from 'react-redux'
 
-export const Today = () => {
+const Today = () => {
     const state = useSelector(state => state.aug_23)
 
     const Items = () => (state.map((posters) => (
@@ -20,3 +20,5 @@ export const Today = () => {
         </Container>
     )
 }
+
+export default connect(null, null)(Today)
