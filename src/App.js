@@ -1,16 +1,9 @@
 import {useState} from 'react'
-import { Provider } from 'react-redux';
-import { Header } from './componets/Header';
-import { BrowserRouter, Route, Redirect } from 'react-router-dom';
-import { About } from './componets/About';
-import { Footer } from './componets/Footer';
+import { Provider } from 'react-redux'
+import { BrowserRouter, Route, Redirect } from 'react-router-dom'
 import {Container, Row} from 'react-bootstrap'
-import { Today } from './componets/Today';
-import { Tommorow } from './componets/Tommorow';
-import { MainPage } from './componets/MainPage';
-import { ModalDate } from './componets/ModalDate';
-import { AppWrapper } from './styled/Common.style';
-import store from './redux/store';
+import store from './redux/store'
+import { Header, About, Footer, Today, Tommorow, MainPage, ModalDate, AppWrapper} from './componets/index.js'
 
 function App() {
   const [date, setDate] = useState(false)
