@@ -1,5 +1,6 @@
-import {Container, Row} from 'react-bootstrap'
-import { useSelector } from 'react-redux'
+import {Container, Row } from 'react-bootstrap'
+import { useState, useEffect } from 'react'
+import * as axios from 'axios'
 
 import { Poster } from './Poster'
 
@@ -8,9 +9,19 @@ import { RowWrapper } from '../styled/Common.style'
 
 
 export const Tommorow = () => {
-    const state = useSelector(state => state.aug_24)
+    const [posters, setPosters] = useState([])
 
-    const Items = () => (state.map((posters) => (
+    useEffect(() => {
+        let data = []
+        axios.get('https://demo3586434.mockable.io/date/aug_23')
+        .then((res) => {
+            data = res.data.aug_23
+            setPosters(data)
+        })
+        
+    }, [])
+
+    const Items = () => (posters.map((posters) => (
         <Poster poster={posters} key={posters.id}/>
     )))
 

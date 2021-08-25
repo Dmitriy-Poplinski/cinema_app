@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Container, Row, Carousel, Button } from 'react-bootstrap'
-import { useSelector } from 'react-redux'
+import * as axios from 'axios'
 
 import {
     MainPageTitleWrapper, 
@@ -13,14 +13,23 @@ import {
 } from './../styled/MainPage.style'
 
 export const MainPage = () => {
-    const state = useSelector(state => state.premieres)
     const [showInfo, setShowInfo] = useState(false)
+    const [premieres, setPremieres] = useState([])
+
+    useEffect(() => {
+        let data = []
+        axios.get('https://demo3586434.mockable.io/premieres')
+        .then((res) => {
+            data = res.data.premieres
+            setPremieres(data)
+        })
+    })
 
     const showInfoToggle = () => {
         setShowInfo(!showInfo)
     }
 
-    const Items = () => (state.map((state) => (
+    const Items = () => (premieres.map((state) => (
                 <Carousel.Item>
                     {showInfo ?
                         <Container>
