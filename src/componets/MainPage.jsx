@@ -1,5 +1,5 @@
 import { Container, Row, Carousel, Button } from 'react-bootstrap'
-import { useSelector, connect } from 'react-redux'
+import { connect } from 'react-redux'
 import {
     MainPageTitleWrapper, 
     MainPageTextWrapper, 
@@ -9,10 +9,8 @@ import {
     MainPageButtonWrapper
 } from './../styled/MainPage.style.jsx'
 
-const MainPage = () => {
-    const state = useSelector(state => state.premieres)
-
-    const Items = () => (state.map((state) => (
+const MainPage = ({premieres}) => {
+    const Items = () => (premieres.map((state) => (
                 <Carousel.Item interval={state.interval}>
                     <MainPageImg
                         className="d-block w-70"
@@ -47,4 +45,12 @@ const MainPage = () => {
     )
 }
 
-export default connect(null, null)(MainPage)
+const mapStateToProps = state => {
+    return {
+        premieres: state.premieres
+    }
+}
+
+const mapDispatchToProps = {}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MainPage)

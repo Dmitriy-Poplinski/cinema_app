@@ -1,12 +1,10 @@
 import { RowWrapper } from '../styled/Common.style.jsx'
 import {Container, Row} from 'react-bootstrap'
 import { Poster } from './Poster'
-import { useSelector, connect } from 'react-redux'
+import { connect } from 'react-redux'
 
-const Tommorow = () => {
-    const state = useSelector(state => state.aug_24)
-
-    const Items = () => (state.map((posters) => (
+const Tommorow = ({tommorowMovies}) => {
+    const Items = () => (tommorowMovies.map((posters) => (
         <Poster poster={posters} key={posters.id}/>
     )))
 
@@ -21,4 +19,12 @@ const Tommorow = () => {
     )
 }
 
-export default connect(null, null)(Tommorow)
+const mapStateToProps = state => {
+    return {
+        tommorowMovies: state.aug_24
+    }
+}
+
+const mapDispatchToProps = {}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Tommorow)

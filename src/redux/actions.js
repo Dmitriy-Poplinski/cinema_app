@@ -1,3 +1,9 @@
-export const GET_PREMIERES = 'GET_PREMIERES'
-export const GET_TODAY_MOVIES = 'GET_TODAY_MOVIES'
-export const GET_TOMMOROW_MOVIES = 'GET_TOMMOROW_MOVIES'
+import { FETCH_PREMIERES } from './types';
+import { API } from './API';
+
+export const fetchPremieres = (payload) => {
+    return async dispatch => {
+        const data = await API.premieres
+        dispatch({type: FETCH_PREMIERES, payload: data})
+    }
+}

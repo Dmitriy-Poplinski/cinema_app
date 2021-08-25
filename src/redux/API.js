@@ -4,7 +4,7 @@ const instance = axios.create({
     baseURL: ' https://demo3586434.mockable.io/',
   });
 
-export const getPremieres = () => {
+const getPremieres = () => {
     let data = null
     instance.get('premieres')
     .then(res=>{
@@ -14,7 +14,7 @@ export const getPremieres = () => {
     return data
 }
 
-export const getTodayMovies = () => {
+const getTodayMovies = () => {
     let data = null
     instance.get('date/aug_23')
     .then(res=>{
@@ -24,7 +24,7 @@ export const getTodayMovies = () => {
     return data
 }
 
-export const getTommorowMovies = () => {
+const getTommorowMovies = () => {
     let data = null
     instance.get('date/aug_23')
     .then(res=>{
@@ -32,4 +32,10 @@ export const getTommorowMovies = () => {
     })
 
     return data
+}
+
+export const API = {
+    premieres: getPremieres(),
+    todayMovies: getTodayMovies(),
+    tommorowMovies: getTommorowMovies(),
 }
