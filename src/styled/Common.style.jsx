@@ -55,4 +55,3 @@ height: 100%;
   width: 400px;
 }
 `
-

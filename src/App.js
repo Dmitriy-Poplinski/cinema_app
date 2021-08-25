@@ -1,9 +1,9 @@
 import {useState} from 'react'
 import { Provider } from 'react-redux'
 import { BrowserRouter, Route, Redirect } from 'react-router-dom'
-import {Container, Row} from 'react-bootstrap'
+import { Row } from 'react-bootstrap'
 import store from './redux/store'
-import { Header, About, Footer, Today, Tommorow, MainPage, ModalDate, AppWrapper} from './componets/index.js'
+import { Header, About, Footer, Today, Tommorow, MainPage, ModalDate, AppWrapper } from './componets/index.js'
 
 function App() {
   const [date, setDate] = useState(false)
@@ -19,7 +19,6 @@ function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
-        <Container>
           <AppWrapper>
             <Row><Header redirectToMain={redirectToMain} redirectToDate={redirectToDate}/></Row>
             <Row>
@@ -35,7 +34,6 @@ function App() {
               <Footer />
             </Row>
           </AppWrapper>
-        </Container>
       </BrowserRouter>
     </Provider>
   );
