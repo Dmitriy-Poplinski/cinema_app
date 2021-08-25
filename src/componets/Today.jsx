@@ -1,7 +1,9 @@
-import { RowWrapper } from '../styled/Common.style.jsx'
 import {Container, Row} from 'react-bootstrap'
-import { Poster } from './Poster'
 import { useSelector } from 'react-redux'
+
+import { RowWrapper } from '../styled/Common.style.jsx'
+import { Poster } from './Poster'
+
 
 export const Today = () => {
     const state = useSelector(state => state.aug_23)

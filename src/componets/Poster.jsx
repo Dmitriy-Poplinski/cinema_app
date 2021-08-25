@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import {Button , Col} from 'react-bootstrap'
-import { PosterImg, PosterStyledButton, PosterStyledColumn, PosterTimeWrapper } from '../styled/Poster.style.jsx'
+
+import { PosterImg, PosterStyledButton, PosterStyledColumn, PosterTimeWrapper } from '../styled/Poster.style'
 
 export const Poster = (props) => {
     const [showInfo, setShowInfo] = useState(true)

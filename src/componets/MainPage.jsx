@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Container, Row, Carousel, Button } from 'react-bootstrap'
 import { useSelector } from 'react-redux'
+
 import {
     MainPageTitleWrapper, 
     MainPageTextWrapper, 
@@ -9,7 +10,7 @@ import {
     MainPageParagraph,
     MainPageButtonWrapper,
     MainPageDetailsWrapper,
-} from './../styled/MainPage.style.jsx'
+} from './../styled/MainPage.style'
 
 export const MainPage = () => {
     const state = useSelector(state => state.premieres)
