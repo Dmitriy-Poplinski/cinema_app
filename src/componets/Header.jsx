@@ -13,7 +13,7 @@ export const Header = ({redirectToMain, redirectToDate}) => {
         window.history.pushState({}, '', '/')
         redirectToMain()
     }
-    
+
     const handleShow = () => {
         setShow(true)
         window.history.pushState({}, '', '/date')

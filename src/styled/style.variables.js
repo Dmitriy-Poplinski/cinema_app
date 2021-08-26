@@ -7,4 +7,3 @@ export const RowWrapperLaptopImageWidth = '360px'
 export const AppWrapperPhoneWidth = '400px'
 
 export const MainPageTextWrapperTabletFontSize = '16px'
-
