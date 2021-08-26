@@ -19,7 +19,7 @@ export const Today = () => {
     }, [])
 
     const Items = () => (posters.map((poster) => (
-        <Poster poster={poster} key={poster.id}/>
+        <Poster poster={poster} key={posters.id}/>
     )))
 
     return (

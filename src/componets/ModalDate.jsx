@@ -1,6 +1,6 @@
 import { Modal, Button } from 'react-bootstrap'
 
-import { DatePicker } from './DatePicker';
+import { DatePicker } from './DatePicker'
 
 export const ModalDate = ({show, handleClose}) => (
     <>

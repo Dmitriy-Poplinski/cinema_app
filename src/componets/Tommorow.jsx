@@ -15,11 +15,10 @@ export const Tommorow = () => {
             data = res.data.aug_24
             setPosters(data)
         })
-        
     }, [])
 
-    const Items = () => (posters.map((posters) => (
-        <Poster poster={posters} key={posters.id}/>
+    const Items = () => (posters.map((poster) => (
+        <Poster poster={poster} key={poster.id}/>
     )))
 
     return (

@@ -12,12 +12,13 @@ export const Header = ({redirectToMain, redirectToDate}) => {
         setShow(false)
         window.history.pushState({}, '', '/')
         redirectToMain()
-    };
+    }
+    
     const handleShow = () => {
         setShow(true)
         window.history.pushState({}, '', '/date')
         redirectToDate()
-    };
+    }
 
     return (
         <Navbar bg="dark" variant="dark" expand="lg" fixed="top" collapseOnSelect>
