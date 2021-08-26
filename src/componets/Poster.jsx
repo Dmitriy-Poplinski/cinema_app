@@ -8,7 +8,7 @@ import {
     PosterTimeWrapper 
 } from '../styled/Poster.style'
 
-export const Poster = (props) => {
+export const Poster = ({posterImage, date, time, altText}) => {
     const [showInfo, setShowInfo] = useState(true)
 
     const showInfoToggle = () => {
@@ -19,9 +19,9 @@ export const Poster = (props) => {
         <Col>
         {showInfo ? 
             <PosterStyledColumn>
-                <PosterImg src={props.poster.posterImage} alt="Постера ещё нет"/>
+                <PosterImg src={posterImage} alt={altText}/>
                 <PosterTimeWrapper>
-                    <span>{props.poster.date}</span><span>{props.poster.time}</span>
+                    <span>{date}</span><span>{time}</span>
                 </PosterTimeWrapper>
                 <PosterStyledButton>
                     <Button variant="info" onClick={showInfoToggle}>Детальніше</Button>
