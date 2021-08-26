@@ -1,11 +1,13 @@
 import styled from 'styled-components'
 
+import { HeaderLogoPhoneFontSize } from './style.variables'
+
 export const HeaderLogo = styled.div`
 margin-left: 20px;
 font-size: 30px;
 text-align: center;
 @media (max-width: 320px) {
-    font-size: 16px;
+    font-size: ${HeaderLogoPhoneFontSize};
 }
 `
 

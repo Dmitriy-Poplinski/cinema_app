@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { MainPageTextWrapperTabletFontSize } from 'style.variables.js'
+
 export const MainPageTitleWrapper = styled.div`
 margin-top: 80px;
 text-align: center;
@@ -8,7 +10,7 @@ font-size: 40px
 
 export const MainPageTextWrapper = styled.span`
 @media (max-width: 700px) {
-    font-size: 16px;
+    font-size: ${MainPageTextWrapperTabletFontSize};
 }
 `
 

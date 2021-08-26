@@ -1,5 +1,12 @@
 import styled, {createGlobalStyle} from 'styled-components'
 
+import { 
+  RowWrapperLaptopMargin, 
+  RowWrapperLaptopWidth, 
+  RowWrapperLaptopImageWidth,
+  AppWrapperPhoneWidth 
+} from './style.variables'
+
 export const Global = createGlobalStyle`
 body {
   margin: 0;
@@ -40,10 +47,10 @@ a {
 export const RowWrapper = styled.div`
 margin-top: 100px;
 @media (max-width: 1200px) {
-    margin: 100px auto;
-    width: 400px;
+    margin: ${RowWrapperLaptopMargin};
+    width: ${RowWrapperLaptopWidth};
     img {
-        width: 360px;
+        width: ${RowWrapperLaptopImageWidth};
     }
 }
 `
@@ -52,6 +59,6 @@ export const AppWrapper = styled.div`
 position: relative;
 height: 100%;
 @media (max-width: 426px) {
-  width: 400px;
+  width: ${AppWrapperPhoneWidth};
 }
 `
