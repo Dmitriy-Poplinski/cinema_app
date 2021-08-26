@@ -1,6 +1,6 @@
 import { Modal, Button } from 'react-bootstrap'
 
-import { MaterialUIPickers } from './DatePicker';
+import { DatePicker } from './DatePicker';
 
 export const ModalDate = ({show, handleClose}) => (
     <>
@@ -9,7 +9,7 @@ export const ModalDate = ({show, handleClose}) => (
                 <Modal.Title>Підберіть дату</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <MaterialUIPickers />
+                <DatePicker />
             </Modal.Body>
             <Modal.Footer>
                 <Button variant="secondary" onClick={handleClose}>

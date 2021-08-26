@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { MainPageTextWrapperTabletFontSize } from 'style.variables.js'
+import { MainPageTextWrapperTabletFontSize } from './style.variables'
 
 export const MainPageTitleWrapper = styled.div`
 margin-top: 80px;

@@ -2,13 +2,15 @@ import {useState} from 'react'
 import { BrowserRouter, Route, Redirect } from 'react-router-dom'
 import { Row } from 'react-bootstrap'
 
-import { Header } from './componets/Header'
-import { About } from './componets/About'
-import { Footer } from './componets/Footer'
-import { Today } from './componets/Today'
-import { Tommorow } from './componets/Tommorow'
-import { MainPage } from './componets/MainPage'
-import { ModalDate } from './componets/ModalDate'
+import { 
+  Header, 
+  About, 
+  Footer, 
+  Today, 
+  Tommorow, 
+  MainPage, 
+  ModalDate 
+} from './componets/'
 import { AppWrapper } from './styled/Common.style'
 
 const  App = () => {

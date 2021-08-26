@@ -6,7 +6,7 @@ import {
   KeyboardDatePicker,
 } from '@material-ui/pickers'
 
-export const MaterialUIPickers = () => {
+export const DatePicker = () => {
   const [selectedDate, setSelectedDate] = useState(new Date('2021-08-23'))
 
   const handleDateChange = (date) => {
