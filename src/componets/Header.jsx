@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import {Navbar} from 'react-bootstrap'
-import {Nav} from 'react-bootstrap'
+import {Navbar, Nav} from 'react-bootstrap'
 
 import { ModalDate } from './ModalDate'
 import { HeaderLogo, HeaderMenuWrapper, HeaderMenuItem } from '../styled/Header.style'

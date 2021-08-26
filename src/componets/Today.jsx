@@ -5,7 +5,6 @@ import * as axios from 'axios'
 import { RowWrapper } from '../styled/Common.style.jsx'
 import { Poster } from './Poster'
 
-
 export const Today = () => {
     const [posters, setPosters] = useState([])
 
