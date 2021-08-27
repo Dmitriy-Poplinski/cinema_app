@@ -3,15 +3,12 @@ import * as axios from 'axios'
 
 import { fetchTommorowMoviesAC, asyncFetchTommorowMoviesAC } from '../types';
 
-
 const setTodayMovies = async () => {
     let data = []
-
     await axios.get('https://demo3586434.mockable.io/date/aug_24')
     .then((res) => {
         data = res.data.aug_24
     })
-
     return data
 }
 
