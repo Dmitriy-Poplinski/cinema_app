@@ -9,13 +9,11 @@ const defaultState = {
 export const rootReducer = (state = defaultState, action) => {
     switch (action.type) {
         case FETCH_PREMIERES:
-            return {...state, premieres: 
-                state.premieres.concat(action.payload)
-            }
+            return {...state, premieres: action.payload}
         case FETCH_MOVIES_TODAY:
-            return state
+            return {...state, aug_23: action.payload}
         case FETCH_MOVIES_TOMMOROW:
-            return state
+            return {...state, aug_24: action.payload}
         default:
             return state
     }

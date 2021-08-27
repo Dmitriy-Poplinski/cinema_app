@@ -1,21 +1,14 @@
 import {Container, Row} from 'react-bootstrap'
-import { useState, useEffect } from 'react'
-import * as axios from 'axios'
+import { connect } from 'react-redux'
+import {  useEffect } from 'react'
 
 import { RowWrapper } from '../styled/Common.style.jsx'
 import { Poster } from './Poster'
+import { asyncFetchTodayMoviesAC } from '../redux/types.js'
 
-export const Today = () => {
-    const [posters, setPosters] = useState([])
-
+const Today = ({posters, asyncFetchTodayMovies}) => {
     useEffect(() => {
-        let data = []
-        axios.get('https://demo3586434.mockable.io/date/aug_23')
-        .then((res) => {
-            data = res.data.aug_23
-            setPosters(data)
-        })
-        
+        asyncFetchTodayMovies()
     }, [])
 
     const Items = () => (posters.map((poster) => (
@@ -32,3 +25,11 @@ export const Today = () => {
         </Container>
     )
 }
+
+const mapStateToProps = (state) => ({posters: state.aug_23})
+
+const mapDispatchToProps = (dispatch) => ({
+    asyncFetchTodayMovies: () => dispatch(asyncFetchTodayMoviesAC())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Today)
