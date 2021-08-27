@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Container, Row, Carousel, Button } from 'react-bootstrap'
-import * as axios from 'axios'
+import { connect, useDispatch, useSelector } from 'react-redux'
 
 import {
     MainPageTitleWrapper, 
@@ -12,30 +12,28 @@ import {
     MainPageDetailsWrapper,
 } from './../styled/MainPage.style'
 
-export const MainPage = () => {
+import { asyncFetchPremieresAC } from '../redux/types'
+
+
+const MainPage = ({premieres, asyncFetchPremieres}) => {
     const [showInfo, setShowInfo] = useState(false)
-    const [premieres, setPremieres] = useState([])
 
     useEffect(() => {
-        let data = []
-        axios.get('https://demo3586434.mockable.io/premieres')
-        .then((res) => {
-            data = res.data.premieres
-            setPremieres(data)
-        })
-    })
+        asyncFetchPremieres()
+    }, [])
 
     const showInfoToggle = () => {
         setShowInfo(!showInfo)
     }
-
-    const Items = () => (premieres.map((state) => (
+    
+    const Items = () => (premieres.map((premiere) => {
+        return (
                 <Carousel.Item>
                     {showInfo ?
                         <Container>
                             <MainPageDetailsWrapper>
                                     <p>
-                                        {state.text}
+                                        {premiere.text}
                                     </p>
                                 <MainPageButtonWrapper>
                                     <Button onClick={showInfoToggle} variant="info"><MainPageTextWrapper>Назад</MainPageTextWrapper></Button> 
@@ -46,19 +44,19 @@ export const MainPage = () => {
                         <>
                             <MainPageImg
                                 className="d-block w-70"
-                                src={state.posterImage}
-                                alt={state.altText}
+                                src={premiere.posterImage}
+                                alt={premiere.altText}
                             />
                             <Carousel.Caption>
                                 <MainPageButtonWrapper>
                                     <Button onClick={showInfoToggle} variant="info"><MainPageTextWrapper>Детальніше</MainPageTextWrapper></Button>    
                                 </MainPageButtonWrapper>
-                                <MainPageParagraph><MainPageTextWrapper>{state.title}</MainPageTextWrapper></MainPageParagraph>
+                                <MainPageParagraph><MainPageTextWrapper>{premiere.title}</MainPageTextWrapper></MainPageParagraph>
                             </Carousel.Caption>
                         </>
                     }
                 </Carousel.Item>
-            )
+            )}
         )
     )
 
@@ -81,3 +79,12 @@ export const MainPage = () => {
         </Container>
     )
 }
+
+const mapStateToProps = (state) => ({
+    premieres: state.premieres,
+})
+
+const mapDispatchToProps = (dispatch) => ({
+    asyncFetchPremieres: () => dispatch(asyncFetchPremieresAC())
+})
+export default connect(mapStateToProps, mapDispatchToProps)(MainPage)

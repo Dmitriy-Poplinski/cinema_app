@@ -1,6 +1,16 @@
-import {createStore} from 'redux'
-import { rootReducer } from './rootReducer'
+import {applyMiddleware, createStore} from 'redux'
+import createSagaMiddleware from 'redux-saga'
 
-let store = createStore(rootReducer)
+import { rootReducer } from './rootReducer'
+import {fetchPremieresWatcher} from './premieresSaga';
+
+const sagaMiddleware = createSagaMiddleware()
+
+let store = createStore(
+    rootReducer,
+    applyMiddleware(sagaMiddleware),
+)
+
+sagaMiddleware.run(fetchPremieresWatcher)
 
 export default store;
