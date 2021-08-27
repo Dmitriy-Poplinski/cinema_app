@@ -1,11 +1,13 @@
 import {Container, Row } from 'react-bootstrap'
 import { useState, useEffect } from 'react'
+import { connect } from 'react-redux'
 import * as axios from 'axios'
 
 import { Poster } from './Poster'
 import { RowWrapper } from '../styled/Common.style'
+import { asyncFetchTommorowMoviesAC } from '../redux/types'
 
-export const Tommorow = () => {
+const Tommorow = () => {
     const [posters, setPosters] = useState([])
 
     useEffect(() => {
@@ -31,3 +33,13 @@ export const Tommorow = () => {
         </Container>
     )
 }
+
+const mapStateToProps = (state) => ({
+    posters: state.aug_24
+})
+
+const mapDispatchToProps = (dispatch) => ({
+    asyncFetchTommorowMovies: () => dispatch(asyncFetchTommorowMoviesAC())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Tommorow)

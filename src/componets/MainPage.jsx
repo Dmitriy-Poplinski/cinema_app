@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Container, Row, Carousel, Button } from 'react-bootstrap'
-import { connect, useDispatch, useSelector } from 'react-redux'
+import { connect } from 'react-redux'
 
 import {
     MainPageTitleWrapper, 
@@ -20,7 +20,7 @@ const MainPage = ({premieres, asyncFetchPremieres}) => {
 
     useEffect(() => {
         asyncFetchPremieres()
-    }, [])
+    })
 
     const showInfoToggle = () => {
         setShowInfo(!showInfo)
