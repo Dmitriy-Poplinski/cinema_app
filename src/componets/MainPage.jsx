@@ -73,13 +73,7 @@ export const MainPage = () => {
     return (
         <Container>
             <InnerContainerStyle>
-            {showInfo ? 
-                null
-            :
-                <Row>
-                    <MainPageTitleWrapper>Прем'єри</MainPageTitleWrapper> 
-                </Row>
-            }
+            {showInfo && <Row><MainPageTitleWrapper>Прем'єри</MainPageTitleWrapper></Row>}
             <Row>
                  <Carousel>
                     {Items()}
