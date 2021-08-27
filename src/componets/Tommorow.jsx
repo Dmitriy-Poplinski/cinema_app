@@ -18,7 +18,13 @@ export const Tommorow = () => {
     }, [])
 
     const Items = () => (posters.map((poster) => (
-        <Poster poster={poster} key={poster.id}/>
+        <Poster 
+            posterImage={poster.posterImage} 
+            altText={poster.altText} 
+            date={poster.date} 
+            time={poster.time} 
+            key={poster.id}
+        />
     )))
 
     return (
