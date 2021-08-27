@@ -1,15 +1,10 @@
 import { useState, useEffect } from 'react'
-import { Container, Row, Carousel, Button } from 'react-bootstrap'
+import { Container, Row, Carousel } from 'react-bootstrap'
 
+import { Slider } from './Slider';
 import {
-
     MainPageTitleWrapper, 
-    MainPageTextWrapper, 
     InnerContainerStyle,
-    MainPageImg,
-    MainPageParagraph,
-    MainPageButtonWrapper,
-    MainPageDetailsWrapper,
 } from './../styled/MainPage.style'
 
 import { axiosAPI } from './../api';
@@ -27,43 +22,18 @@ export const MainPage = () => {
     }
 
     const Items = () => (premieres.map((state) => (
-                <Carousel.Item key={state.id}>
-                    {showInfo ?
-                        <>
-                            <MainPageImg
-                                className="d-block w-70"
-                                src={state.posterImage}
-                                alt={state.altText}
-                            />
-                            <Carousel.Caption>
-                                <MainPageButtonWrapper>
-                                    <Button 
-                                        onClick={showInfoToggle} 
-                                        variant="info"
-                                    ><MainPageTextWrapper>Детальніше</MainPageTextWrapper></Button>    
-                                </MainPageButtonWrapper>
-                                <MainPageParagraph>
-                                    <MainPageTextWrapper>{state.title}</MainPageTextWrapper>
-                                </MainPageParagraph>
-                            </Carousel.Caption>
-                        </>
-                    :
-                        <Container>
-                            <MainPageDetailsWrapper>
-                                <p>
-                                    {state.text}
-                                </p>
-                            <MainPageButtonWrapper>
-                                <Button 
-                                    onClick={showInfoToggle} 
-                                    variant="info"
-                                ><MainPageTextWrapper>Назад</MainPageTextWrapper></Button> 
-                            </MainPageButtonWrapper>
-                            </MainPageDetailsWrapper>
-                        </Container>
-                    }
-                </Carousel.Item>
-            )
+        <Carousel.Item>
+            <Slider
+                showInfo={showInfo} 
+                posterImage = {state.posterImage}
+                altText = {state.altText}
+                title = {state.title}
+                text = {state.text}
+                showInfoToggle = {showInfoToggle}
+                key={state.id}
+            />
+        </Carousel.Item>
+    )
         )
     )
 
