@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Container, Row, Carousel, Button } from 'react-bootstrap'
-import * as axios from 'axios'
 
 import {
+
     MainPageTitleWrapper, 
     MainPageTextWrapper, 
     InnerContainerStyle,
@@ -12,40 +12,23 @@ import {
     MainPageDetailsWrapper,
 } from './../styled/MainPage.style'
 
+import { axiosAPI } from './../api';
+
 export const MainPage = () => {
-    const [showInfo, setShowInfo] = useState(false)
+    const [showInfo, setShowInfo] = useState(true)
     const [premieres, setPremieres] = useState([])
 
     useEffect(() => {
-        let data = []
-        axios.get('https://demo3586434.mockable.io/premieres')
-        .then((res) => {
-            data = res.data.premieres
-            setPremieres(data)
-        })
-    })
+        axiosAPI.fetchPremieres(setPremieres)
+    }, [])
 
     const showInfoToggle = () => {
         setShowInfo(!showInfo)
     }
 
     const Items = () => (premieres.map((state) => (
-                <Carousel.Item>
+                <Carousel.Item key={state.id}>
                     {showInfo ?
-                        <Container>
-                            <MainPageDetailsWrapper>
-                                    <p>
-                                        {state.text}
-                                    </p>
-                                <MainPageButtonWrapper>
-                                    <Button 
-                                        onClick={showInfoToggle} 
-                                        variant="info"
-                                    ><MainPageTextWrapper>Назад</MainPageTextWrapper></Button> 
-                                </MainPageButtonWrapper>
-                            </MainPageDetailsWrapper>
-                        </Container>
-                    :
                         <>
                             <MainPageImg
                                 className="d-block w-70"
@@ -64,6 +47,20 @@ export const MainPage = () => {
                                 </MainPageParagraph>
                             </Carousel.Caption>
                         </>
+                    :
+                        <Container>
+                            <MainPageDetailsWrapper>
+                                <p>
+                                    {state.text}
+                                </p>
+                            <MainPageButtonWrapper>
+                                <Button 
+                                    onClick={showInfoToggle} 
+                                    variant="info"
+                                ><MainPageTextWrapper>Назад</MainPageTextWrapper></Button> 
+                            </MainPageButtonWrapper>
+                            </MainPageDetailsWrapper>
+                        </Container>
                     }
                 </Carousel.Item>
             )

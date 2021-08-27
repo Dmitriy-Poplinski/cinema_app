@@ -1,21 +1,15 @@
 import {Container, Row} from 'react-bootstrap'
 import { useState, useEffect } from 'react'
-import * as axios from 'axios'
 
 import { RowWrapper } from '../styled/Common.style.jsx'
 import { Poster } from './Poster'
+import { axiosAPI } from './../api';
 
 export const Today = () => {
     const [posters, setPosters] = useState([])
 
     useEffect(() => {
-        let data = []
-        axios.get('https://demo3586434.mockable.io/date/aug_23')
-        .then((res) => {
-            data = res.data.aug_23
-            setPosters(data)
-        })
-        
+        axiosAPI.fetchTodayMovies(setPosters)
     }, [])
 
     const Items = () => (posters.map((poster) => (
