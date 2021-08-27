@@ -1,10 +1,8 @@
 import styled, {createGlobalStyle} from 'styled-components'
 
 import { 
-  RowWrapperLaptopMargin, 
-  RowWrapperLaptopWidth, 
-  RowWrapperLaptopImageWidth,
-  AppWrapperPhoneWidth 
+  Laptop,
+  PhoneAppWrapper 
 } from './style.variables'
 
 export const Global = createGlobalStyle`
@@ -45,20 +43,20 @@ a {
 `
 
 export const RowWrapper = styled.div`
-margin-top: 100px;
-@media (max-width: 1200px) {
-    margin: ${RowWrapperLaptopMargin};
-    width: ${RowWrapperLaptopWidth};
-    img {
-        width: ${RowWrapperLaptopImageWidth};
-    }
-}
+  margin-top: 100px;
+  @media (max-width: ${Laptop}) {
+      margin: 100px auto;
+      width: 400px;
+      img {
+          width: 360px;
+      }
+  }
 `
 
 export const AppWrapper = styled.div`
-position: relative;
-height: 100%;
-@media (max-width: 426px) {
-  width: ${AppWrapperPhoneWidth};
-}
+  position: relative;
+  height: 100%;
+  @media (max-width: ${PhoneAppWrapper}) {
+    width: 400px
+  }
 `

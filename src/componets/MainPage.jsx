@@ -38,7 +38,10 @@ export const MainPage = () => {
                                         {state.text}
                                     </p>
                                 <MainPageButtonWrapper>
-                                    <Button onClick={showInfoToggle} variant="info"><MainPageTextWrapper>Назад</MainPageTextWrapper></Button> 
+                                    <Button 
+                                        onClick={showInfoToggle} 
+                                        variant="info"
+                                    ><MainPageTextWrapper>Назад</MainPageTextWrapper></Button> 
                                 </MainPageButtonWrapper>
                             </MainPageDetailsWrapper>
                         </Container>
@@ -51,9 +54,14 @@ export const MainPage = () => {
                             />
                             <Carousel.Caption>
                                 <MainPageButtonWrapper>
-                                    <Button onClick={showInfoToggle} variant="info"><MainPageTextWrapper>Детальніше</MainPageTextWrapper></Button>    
+                                    <Button 
+                                        onClick={showInfoToggle} 
+                                        variant="info"
+                                    ><MainPageTextWrapper>Детальніше</MainPageTextWrapper></Button>    
                                 </MainPageButtonWrapper>
-                                <MainPageParagraph><MainPageTextWrapper>{state.title}</MainPageTextWrapper></MainPageParagraph>
+                                <MainPageParagraph>
+                                    <MainPageTextWrapper>{state.title}</MainPageTextWrapper>
+                                </MainPageParagraph>
                             </Carousel.Caption>
                         </>
                     }
