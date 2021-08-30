@@ -1,8 +1,8 @@
 import styled, {createGlobalStyle} from 'styled-components'
 
 import { 
-  Laptop,
-  PhoneAppWrapper 
+  CommonLaptopRowWrapper,
+  CommonMobileAppWrapper 
 } from './style.variables'
 
 export const Global = createGlobalStyle`
@@ -44,7 +44,7 @@ a {
 
 export const RowWrapper = styled.div`
   margin-top: 100px;
-  @media (max-width: ${Laptop}) {
+  @media (max-width: ${CommonLaptopRowWrapper}) {
       margin: 100px auto;
       width: 400px;
       img {
@@ -56,7 +56,7 @@ export const RowWrapper = styled.div`
 export const AppWrapper = styled.div`
   position: relative;
   height: 100%;
-  @media (max-width: ${PhoneAppWrapper}) {
+  @media (max-width: ${CommonMobileAppWrapper}) {
     width: 400px
   }
 `

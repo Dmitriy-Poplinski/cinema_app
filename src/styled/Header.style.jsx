@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 
-import { Phone } from './style.variables'
+import { HeaderMobileLogo } from './style.variables'
 
 export const HeaderLogo = styled.div`
   margin-left: 20px;
   font-size: 30px;
   text-align: center;
-  @media (max-width: ${Phone}) {
+  @media (max-width: ${HeaderMobileLogo}) {
     font-size: 16px;
   }
 `

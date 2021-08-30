@@ -1,9 +1,17 @@
 import styled from 'styled-components'
 
-import { Tablet } from './style.variables'
+import { 
+  SliderTabletTextWrapper, 
+  SliderTabletImage, 
+  SliderMobileImage,
+  SliderTabletParagraph,
+  SliderMobileParagraph, 
+  SliderTabletButtonWrapper,
+  SliderTabletDetailsWrapper
+} from './style.variables'
 
 export const MainPageTextWrapper = styled.span`
-  @media (max-width: ${Tablet}) {
+  @media (max-width: ${SliderTabletTextWrapper}) {
     font-size: 16px;
   }
 `
@@ -12,11 +20,11 @@ export const MainPageImg = styled.img`
   height: 900px;
   width: 600px;
   margin: 0 auto;
-  @media (max-width: 640px) {
+  @media (max-width: ${SliderTabletImage}) {
       width: 400px;
       height: 400px;
   }
-  @media (max-width: 440px) {
+  @media (max-width: ${SliderMobileImage}) {
     width: 300px;
     height: 400px;
   }
@@ -30,11 +38,11 @@ export const MainPageParagraph = styled.p`
   font-size: 25px;
   background-color: #ccc;
   margin-top: 20px;
-  @media (max-width: 640px) {
+  @media (max-width: ${SliderTabletParagraph}) {
     padding: 7px;
     font-size: 15px;
   }
-  @media (max-width: 440px) {
+  @media (max-width: ${SliderMobileParagraph}) {
     display: none;
   }
 `
@@ -48,7 +56,7 @@ export const MainPageButtonWrapper = styled.div`
     font-size: 30px;
     padding: 20px;
   }
-  @media (max-width: 640px) {
+  @media (max-width: ${SliderTabletButtonWrapper}) {
     button {
         width: 40%;
         font-size: 16px;
@@ -65,7 +73,7 @@ export const MainPageDetailsWrapper = styled.div`
   font-size: 25px;
   background-color: #ccc;
   margin-top: 20px;
-  @media (max-width: 640px) {
+  @media (max-width: ${SliderTabletDetailsWrapper}) {
     font-size: 16px;
   }
 `

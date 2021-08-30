@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Container, Row, Carousel } from 'react-bootstrap'
+import { Row, Carousel } from 'react-bootstrap'
 
 import { Slider } from './Slider';
 import {

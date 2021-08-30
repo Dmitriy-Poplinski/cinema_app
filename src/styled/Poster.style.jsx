@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { PosterMobileColumn, PosterMobileImage } from './style.variables';
+
 export const PosterStyledColumn = styled.div`
   width: 400px;
   height: 600px;
@@ -10,14 +12,22 @@ export const PosterStyledColumn = styled.div`
   padding-right: 20px;
   padding-top: 10px;
   margin-top: 40px;
+  @media (max-width: ${PosterMobileColumn}) {
+    width: 100%;
+  }
 `
 
 export const PosterImg = styled.img`
   width: 100%;
   height: 400px;
-  marginTop: 10px;
+  margin-top: 10px;
   border: none;
   outline: none;
+  @media (max-width: ${PosterMobileImage}) {
+    margin: 0;
+    width: 300px;
+    heigth: 400px;
+  }
 `
 
 export const PosterStyledButton = styled.div`
