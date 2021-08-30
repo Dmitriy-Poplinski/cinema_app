@@ -1,19 +1,10 @@
 import { put, call, takeEvery } from 'redux-saga/effects'
-import * as axios from 'axios'
 
 import { fetchPremieresAC, asyncFetchPremieresAC } from '../types';
-
-const setPremieres = async () => {
-    let data = []
-    await axios.get('https://demo3586434.mockable.io/premieres')
-    .then((res) => {
-        data = res.data.premieres
-    })
-    return data
-}
+import { AxiosAPI } from './../../api';
 
 function* fetchPremieresWorker() {
-    const data = yield call(setPremieres)
+    const data = yield call(AxiosAPI.setPremieres)
     yield put(fetchPremieresAC(data))
 }
 
