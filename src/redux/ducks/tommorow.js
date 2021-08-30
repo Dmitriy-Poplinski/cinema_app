@@ -5,8 +5,8 @@ import { AxiosAPI } from './../../api';
 const  FETCH_MOVIES_TOMMOROW = 'cinema_app/rootReducer/FETCH_MOVIES_TOMMOROW'
 const  ASYNC_FETCH_MOVIES_TOMMOROW = 'cinema_app/rootReducer/ASYNC_FETCH_MOVIES_TOMMOROW'
 
-export const fetchTommorowMoviesAC = (payload) => ({type: FETCH_MOVIES_TOMMOROW, payload})
-export const asyncFetchTommorowMoviesAC = () => ({type: ASYNC_FETCH_MOVIES_TOMMOROW})
+export const fetchTommorowMoviesWidget = (payload) => ({type: FETCH_MOVIES_TOMMOROW, payload})
+export const asyncFetchTommorowMoviesWidget = () => ({type: ASYNC_FETCH_MOVIES_TOMMOROW})
 
 let initialState = {
     aug_24: []
@@ -24,9 +24,9 @@ export default (state = initialState, action) => {
 
 function* fetchTommorowWorker() {
     const data = yield call(AxiosAPI.setTommorowMovies)
-    yield put(fetchTommorowMoviesAC(data))
+    yield put(fetchTommorowMoviesWidget(data))
 }
 
 export function* fetchTommorowWatcher() {
-    yield takeEvery(asyncFetchTommorowMoviesAC().type, fetchTommorowWorker)
+    yield takeEvery(asyncFetchTommorowMoviesWidget().type, fetchTommorowWorker)
 }

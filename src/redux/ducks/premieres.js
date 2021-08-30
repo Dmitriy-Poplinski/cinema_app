@@ -5,8 +5,8 @@ import { AxiosAPI } from './../../api';
 const  FETCH_PREMIERES = 'cinema_app/rootReducer/FETCH_PREMIERES'
 const  ASYNC_FETCH_PREMIERES = 'cinema_app/rootReducer/ASYNC_FETCH_PREMIERES'
 
-export const fetchPremieresAC = (payload) => ({type: FETCH_PREMIERES, payload})
-export const asyncFetchPremieresAC = () => ({type: ASYNC_FETCH_PREMIERES})
+export const fetchPremieresWidget = (payload) => ({type: FETCH_PREMIERES, payload})
+export const asyncFetchPremieresWidget = () => ({type: ASYNC_FETCH_PREMIERES})
 
 let initialState = {
     premieres: []
@@ -25,10 +25,10 @@ export default (state = initialState, action) => {
 
 function* fetchPremieresWorker() {
     const data = yield call(AxiosAPI.setPremieres)
-    yield put(fetchPremieresAC(data))
+    yield put(fetchPremieresWidget(data))
 }
 
 export function* fetchPremieresWatcher() {
-    yield takeEvery(asyncFetchPremieresAC().type, fetchPremieresWorker)
+    yield takeEvery(asyncFetchPremieresWidget().type, fetchPremieresWorker)
 }
 

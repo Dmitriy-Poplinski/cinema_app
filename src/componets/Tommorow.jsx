@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 import { Poster } from './Poster'
 import { RowWrapper } from '../styled/Common.style'
-import { asyncFetchTommorowMoviesAC } from '../redux/types'
+import { asyncFetchTommorowMoviesWidget } from '../redux/ducks/tommorow'
 
 const Tommorow = ({posters, asyncFetchTommorowMovies}) => {
     useEffect(() => {
@@ -37,7 +37,7 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-    asyncFetchTommorowMovies: () => dispatch(asyncFetchTommorowMoviesAC())
+    asyncFetchTommorowMovies: () => dispatch(asyncFetchTommorowMoviesWidget())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Tommorow)

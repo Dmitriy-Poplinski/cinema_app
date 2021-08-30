@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 
 import { RowWrapper } from '../styled/Common.style'
 import { Poster } from './Poster'
-import { asyncFetchTodayMoviesAC } from '../redux/types'
+import { asyncFetchTodayMoviesWidget } from '../redux/ducks/today'
 
 const Today = ({posters, asyncFetchTodayMovies}) => {
     useEffect(() => {
@@ -35,7 +35,7 @@ const Today = ({posters, asyncFetchTodayMovies}) => {
 const mapStateToProps = (state) => ({posters: state.todayReducer.aug_23})
 
 const mapDispatchToProps = (dispatch) => ({
-    asyncFetchTodayMovies: () => dispatch(asyncFetchTodayMoviesAC())
+    asyncFetchTodayMovies: () => dispatch(asyncFetchTodayMoviesWidget())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Today)

@@ -10,7 +10,7 @@ import {
     InnerContainerStyle,
 } from './../styled/MainPage.style'
 
-import { asyncFetchPremieresAC } from '../redux/types'
+import { asyncFetchPremieresWidget } from '../redux/ducks/premieres'
 
 
 const MainPage = (props) => {
@@ -58,6 +58,6 @@ const mapStateToProps = (state) => {
 }}
 
 const mapDispatchToProps = (dispatch) => ({
-    asyncFetchPremieres: () => dispatch(asyncFetchPremieresAC())
+    asyncFetchPremieres: () => dispatch(asyncFetchPremieresWidget())
 })
 export default connect(mapStateToProps, mapDispatchToProps)(MainPage)
