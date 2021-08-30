@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './App.tsx';
+import App from './App';
 import { Global } from './styled/Common.style'
 
 ReactDOM.render(
