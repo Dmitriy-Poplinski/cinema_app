@@ -13,18 +13,18 @@ import {
 import { asyncFetchPremieresAC } from '../redux/types'
 
 
-const MainPage = ({premieres, asyncFetchPremieres}) => {
+const MainPage = (props) => {
     const [showInfo, setShowInfo] = useState(false)
 
     useEffect(() => {
-        asyncFetchPremieres()
+        props.asyncFetchPremieres()
     })
 
     const showInfoToggle = () => {
         setShowInfo(!showInfo)
     }
 
-    const Items = () => (premieres.map((state) => (
+    const Items = () => (props.premieres.map((state) => (
             <Carousel.Item>
                 <Slider
                     showInfo={showInfo} 
@@ -52,9 +52,10 @@ const MainPage = ({premieres, asyncFetchPremieres}) => {
     )
 }
 
-const mapStateToProps = (state) => ({
-    premieres: state.premieres,
-})
+const mapStateToProps = (state) => {
+    return {
+    premieres: state.premiereReducer.premieres,
+}}
 
 const mapDispatchToProps = (dispatch) => ({
     asyncFetchPremieres: () => dispatch(asyncFetchPremieresAC())

@@ -33,7 +33,7 @@ const Tommorow = ({posters, asyncFetchTommorowMovies}) => {
 }
 
 const mapStateToProps = (state) => ({
-    posters: state.aug_24
+    posters: state.tommorowReducer.aug_24
 })
 
 const mapDispatchToProps = (dispatch) => ({

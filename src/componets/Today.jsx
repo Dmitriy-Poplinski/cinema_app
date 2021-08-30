@@ -32,7 +32,7 @@ const Today = ({posters, asyncFetchTodayMovies}) => {
     )
 }
 
-const mapStateToProps = (state) => ({posters: state.aug_23})
+const mapStateToProps = (state) => ({posters: state.todayReducer.aug_23})
 
 const mapDispatchToProps = (dispatch) => ({
     asyncFetchTodayMovies: () => dispatch(asyncFetchTodayMoviesAC())
