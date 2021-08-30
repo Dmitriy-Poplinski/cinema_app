@@ -38,15 +38,13 @@ export const MainPage = () => {
     )
 
     return (
-        <Container>
-            <InnerContainerStyle>
+        <InnerContainerStyle>
             {showInfo && <Row><MainPageTitleWrapper>Прем'єри</MainPageTitleWrapper></Row>}
             <Row>
                  <Carousel>
                     {Items()}
                 </Carousel> 
             </Row>
-            </InnerContainerStyle>
-        </Container>
+        </InnerContainerStyle>
     )
 }
