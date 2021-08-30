@@ -51,7 +51,7 @@ const mapStateToProps = (state: State) => ({
     posters: state.tommorowReducer.aug_24
 })
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = (dispatch: any) => ({
     asyncFetchTommorowMovies: () => dispatch(asyncFetchTommorowMoviesWidget())
 })
 

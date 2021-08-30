@@ -69,9 +69,7 @@ const mapStateToProps = (state: State) => (
     {premieres: state.premiereReducer.premieres}
 )
 
-type DispatchType = (args: ArticleAction) => ArticleAction
-
-const mapDispatchToProps = (dispatch: DispatchType) => ({
+const mapDispatchToProps = (dispatch: any) => ({
     asyncFetchPremieres: () => dispatch(asyncFetchPremieresWidget())
 })
 export default connect(mapStateToProps, mapDispatchToProps)(MainPage)

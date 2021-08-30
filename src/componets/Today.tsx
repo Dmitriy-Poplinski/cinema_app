@@ -49,7 +49,7 @@ type State = {todayReducer: {aug_23: []}}
 
 const mapStateToProps = (state: State) => ({posters: state.todayReducer.aug_23})
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = (dispatch: any) => ({
     asyncFetchTodayMovies: () => dispatch(asyncFetchTodayMoviesWidget())
 })
 
