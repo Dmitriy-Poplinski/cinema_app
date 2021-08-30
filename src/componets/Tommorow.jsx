@@ -1,16 +1,15 @@
 import {Container, Row } from 'react-bootstrap'
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
+import { connect } from 'react-redux'
 
 import { Poster } from './Poster'
 import { RowWrapper } from '../styled/Common.style'
-import { axiosAPI } from './../api';
+import { asyncFetchTommorowMoviesAC } from '../redux/types'
 
-export const Tommorow = () => {
-    const [posters, setPosters] = useState([])
-
+const Tommorow = ({posters, asyncFetchTommorowMovies}) => {
     useEffect(() => {
-        axiosAPI.fetchTommorowMovies(setPosters)
-    }, [])
+        asyncFetchTommorowMovies()
+    })
 
     const Items = () => (posters.map((poster) => (
         <Poster 
@@ -32,3 +31,13 @@ export const Tommorow = () => {
         </Container>
     )
 }
+
+const mapStateToProps = (state) => ({
+    posters: state.aug_24
+})
+
+const mapDispatchToProps = (dispatch) => ({
+    asyncFetchTommorowMovies: () => dispatch(asyncFetchTommorowMoviesAC())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Tommorow)

@@ -1,16 +1,15 @@
 import {Container, Row} from 'react-bootstrap'
-import { useState, useEffect } from 'react'
+import { connect } from 'react-redux'
+import { useEffect } from 'react'
 
 import { RowWrapper } from '../styled/Common.style.jsx'
 import { Poster } from './Poster'
-import { axiosAPI } from './../api';
+import { asyncFetchTodayMoviesAC } from '../redux/types.js'
 
-export const Today = () => {
-    const [posters, setPosters] = useState([])
-
+const Today = ({posters, asyncFetchTodayMovies}) => {
     useEffect(() => {
-        axiosAPI.fetchTodayMovies(setPosters)
-    }, [])
+        asyncFetchTodayMovies()
+    })
 
     const Items = () => (posters.map((poster) => (
         <Poster 
@@ -32,3 +31,11 @@ export const Today = () => {
         </Container>
     )
 }
+
+const mapStateToProps = (state) => ({posters: state.aug_23})
+
+const mapDispatchToProps = (dispatch) => ({
+    asyncFetchTodayMovies: () => dispatch(asyncFetchTodayMoviesAC())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Today)

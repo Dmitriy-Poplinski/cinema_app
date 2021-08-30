@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react'
-import { Row, Carousel } from 'react-bootstrap'
+
+import {  Row, Carousel } from 'react-bootstrap'
+import { connect } from 'react-redux'
+
 
 import { Slider } from './Slider';
 import {
@@ -7,33 +10,33 @@ import {
     InnerContainerStyle,
 } from './../styled/MainPage.style'
 
-import { axiosAPI } from './../api';
+import { asyncFetchPremieresAC } from '../redux/types'
 
-export const MainPage = () => {
-    const [showInfo, setShowInfo] = useState(true)
-    const [premieres, setPremieres] = useState([])
+
+const MainPage = ({premieres, asyncFetchPremieres}) => {
+    const [showInfo, setShowInfo] = useState(false)
 
     useEffect(() => {
-        axiosAPI.fetchPremieres(setPremieres)
-    }, [])
+        asyncFetchPremieres()
+    })
 
     const showInfoToggle = () => {
         setShowInfo(!showInfo)
     }
 
     const Items = () => (premieres.map((state) => (
-        <Carousel.Item>
-            <Slider
-                showInfo={showInfo} 
-                posterImage = {state.posterImage}
-                altText = {state.altText}
-                title = {state.title}
-                text = {state.text}
-                showInfoToggle = {showInfoToggle}
-                key={state.id}
-            />
-        </Carousel.Item>
-    )
+            <Carousel.Item>
+                <Slider
+                    showInfo={showInfo} 
+                    posterImage = {state.posterImage}
+                    altText = {state.altText}
+                    title = {state.title}
+                    text = {state.text}
+                    showInfoToggle = {showInfoToggle}
+                    key={state.id}
+                    />
+                </Carousel.Item>
+            )
         )
     )
 
@@ -48,3 +51,12 @@ export const MainPage = () => {
         </InnerContainerStyle>
     )
 }
+
+const mapStateToProps = (state) => ({
+    premieres: state.premieres,
+})
+
+const mapDispatchToProps = (dispatch) => ({
+    asyncFetchPremieres: () => dispatch(asyncFetchPremieresAC())
+})
+export default connect(mapStateToProps, mapDispatchToProps)(MainPage)

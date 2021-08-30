@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import { BrowserRouter, Route, Redirect } from 'react-router-dom'
 import { Row } from 'react-bootstrap'
+import { Provider } from 'react-redux'
 
 import { 
   Header, 
@@ -12,6 +13,7 @@ import {
   ModalDate 
 } from './componets/'
 import { AppWrapper } from './styled/Common.style'
+import store from './redux/store';
 
 const  App = () => {
   const [date, setDate] = useState(false)
@@ -25,6 +27,7 @@ const  App = () => {
   }
 
   return (
+    <Provider store={store}>
       <BrowserRouter>
           <AppWrapper>
             <Row><Header redirectToMain={redirectToMain} redirectToDate={redirectToDate}/></Row>
@@ -42,6 +45,7 @@ const  App = () => {
             </Row>
           </AppWrapper>
       </BrowserRouter>
+      </Provider>
   );
 }
 
