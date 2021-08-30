@@ -6,7 +6,7 @@ import {
     MainPageParagraph,
     MainPageButtonWrapper,
     MainPageDetailsWrapper,
-} from './../styled/MainPage.style'
+} from './../styled/Slider.style'
 
 export const Slider = ({showInfoToggle, posterImage, altText, title, text, showInfo}) => (
     <>
