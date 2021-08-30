@@ -16,8 +16,3 @@ export const SliderTabletParagraph = '640px'
 export const SliderMobileParagraph = '440px'
 export const SliderTabletButtonWrapper = '640px'
 export const SliderTabletDetailsWrapper = '640px'
-
-
-
-
-

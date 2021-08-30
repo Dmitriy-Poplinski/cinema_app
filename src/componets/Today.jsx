@@ -2,9 +2,9 @@ import {Container, Row} from 'react-bootstrap'
 import { connect } from 'react-redux'
 import { useEffect } from 'react'
 
-import { RowWrapper } from '../styled/Common.style.jsx'
+import { RowWrapper } from '../styled/Common.style'
 import { Poster } from './Poster'
-import { asyncFetchTodayMoviesAC } from '../redux/types.js'
+import { asyncFetchTodayMoviesAC } from '../redux/types'
 
 const Today = ({posters, asyncFetchTodayMovies}) => {
     useEffect(() => {
