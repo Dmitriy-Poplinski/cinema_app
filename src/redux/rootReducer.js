@@ -1,12 +1,12 @@
 import { FETCH_MOVIES_TODAY, FETCH_MOVIES_TOMMOROW, FETCH_PREMIERES } from "./types"
 
-const defaultState = {
+const initialState = {
     premieres: [],
     aug_23: [],
     aug_24: [],
 }
 
-export const rootReducer = (state = defaultState, action) => {
+export const rootReducer = (state = initialState, action) => {
     switch (action.type) {
         case FETCH_PREMIERES:
             return {...state, premieres: action.payload}

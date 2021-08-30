@@ -2,27 +2,15 @@ import * as axios from 'axios'
 
 export const AxiosAPI = {
     setPremieres: async () => {
-        let data = []
-        await axios.get('https://demo3586434.mockable.io/premieres')
-        .then((res) => {
-            data = res.data.premieres
-        })
-        return data
+        let response = await axios.get('https://demo3586434.mockable.io/premieres')
+        return response.data.premieres
     },
     setTodayMovies: async () => {
-        let data = []
-        await axios.get('https://demo3586434.mockable.io/date/aug_23')
-        .then((res) => {
-            data = res.data.aug_23
-        })
-        return data
+        let response = await axios.get('https://demo3586434.mockable.io/date/aug_23')
+        return response.data.aug_23
     },
     setTommorowMovies: async () => {
-        let data = []
-        await axios.get('https://demo3586434.mockable.io/date/aug_24')
-        .then((res) => {
-            data = res.data.aug_24
-        })
-        return data
+        let response = await axios.get('https://demo3586434.mockable.io/date/aug_24')
+        return response.data.aug_24
     }
 }
