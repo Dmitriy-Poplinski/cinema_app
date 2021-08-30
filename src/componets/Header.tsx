@@ -5,16 +5,21 @@ import {Navbar, Nav} from 'react-bootstrap'
 import { ModalDate } from './ModalDate'
 import { HeaderLogo, HeaderMenuWrapper, HeaderMenuItem } from '../styled/Header.style'
 
-export const Header = ({redirectToMain, redirectToDate}) => {
+interface HeaderProps {
+    redirectToMain(): void,
+    redirectToDate(): void
+}
+
+export const Header: React.FunctionComponent<HeaderProps> = ({redirectToMain, redirectToDate}) => {
     const [show, setShow] = useState(false);
 
-    const handleClose = () => {
+    const handleClose= (): void => {
         setShow(false)
         window.history.pushState({}, '', '/')
         redirectToMain()
     }
 
-    const handleShow = () => {
+    const handleShow = (): void => {
         setShow(true)
         window.history.pushState({}, '', '/date')
         redirectToDate()

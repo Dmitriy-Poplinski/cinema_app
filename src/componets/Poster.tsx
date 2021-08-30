@@ -8,7 +8,14 @@ import {
     PosterTimeWrapper 
 } from '../styled/Poster.style'
 
-export const Poster = ({posterImage, altText, date, time}) => {
+interface PosterProps {
+    posterImage: string,
+    altText: string,
+    date: string,
+    time: string
+}
+
+export const Poster: React.FunctionComponent<PosterProps> = ({posterImage, altText, date, time}) => {
     const [showInfo, setShowInfo] = useState(true)
 
     const showInfoToggle = () => {

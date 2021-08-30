@@ -11,18 +11,18 @@ import {
   Tommorow, 
   MainPage, 
   ModalDate 
-} from './componets/'
+} from './componets'
 import { AppWrapper } from './styled/Common.style'
 import store from './redux/store';
 
-const  App = () => {
+const App: React.FunctionComponent = () => {
   const [date, setDate] = useState(false)
 
-  const redirectToMain = () => {
+  const redirectToMain = (): void => {
     setDate(true)
   }
 
-  const redirectToDate = () => {
+  const redirectToDate = (): void => {
     setDate(false)
   }
 
@@ -37,7 +37,7 @@ const  App = () => {
               <Route exact path='/today' component={Today}/>
               <Route exact path='/tommorow' component={Tommorow}/>
               <Route exact path='/date'> 
-                {date ? <Redirect to="/" /> : <MainPage><ModalDate /></MainPage>}
+                {date ? <Redirect to="/" /> : <MainPage><ModalDate show={false} handleClose={() => {}}/></MainPage>}
               </Route>
             </Row>
             <Row>

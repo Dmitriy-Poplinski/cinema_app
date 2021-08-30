@@ -6,12 +6,12 @@ import {
   KeyboardDatePicker,
 } from '@material-ui/pickers'
 
-export const DatePicker = () => {
-  const [selectedDate, setSelectedDate] = useState(new Date('2021-08-23'))
+export const DatePicker: React.FunctionComponent = () => {
+  const [selectedDate, setSelectedDate] = useState('2021-08-23')
 
-  const handleDateChange = (date) => {
-    const stringDate = date._d.toString().toLowerCase()
-    const selectedDate = `${stringDate.substr(4, 3)}_${stringDate.substr(8, 2)}`
+  const handleDateChange = (date: any) => {
+    const stringDate: string = date._d.toString().toLowerCase()
+    const selectedDate: string = `${stringDate.substr(4, 3)}_${stringDate.substr(8, 2)}`
     setSelectedDate(selectedDate)
   }
 
