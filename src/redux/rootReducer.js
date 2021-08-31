@@ -1,4 +1,4 @@
-import { FETCH_MOVIES_TODAY, FETCH_MOVIES_TOMMOROW, FETCH_PREMIERES } from "./types"
+import { FETCH_MOVIES_TODAY, FETCH_MOVIES_TOMMOROW, FETCH_PREMIERES } from './types'
 
 const defaultState = {
     premieres: [],

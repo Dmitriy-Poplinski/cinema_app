@@ -13,7 +13,7 @@ import {
   ModalDate 
 } from './componets/'
 import { AppWrapper } from './styled/Common.style'
-import store from './redux/store';
+import store from './redux/store'
 
 const  App = () => {
   const [date, setDate] = useState(false)

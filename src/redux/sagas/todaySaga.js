@@ -1,7 +1,7 @@
 import { put, call, takeEvery } from 'redux-saga/effects'
 
-import { fetchTodayMoviesAC, asyncFetchTodayMoviesAC } from '../types';
-import { AxiosAPI } from './../../api';
+import { fetchTodayMoviesAC, asyncFetchTodayMoviesAC } from '../types'
+import { AxiosAPI } from './../../api'
 
 function* fetchTodayWorker() {
     const data = yield call(AxiosAPI.setTodayMovies)

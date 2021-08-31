@@ -1,10 +1,10 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 import { 
   PosterBackgroundColor, 
   PosterMobileColumn, 
   PosterMobileImage 
-} from './style.variables';
+} from './style.variables'
 
 export const PosterStyledColumn = styled.div`
   width: 400px;

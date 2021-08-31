@@ -6,7 +6,7 @@ import { ModalDate } from './ModalDate'
 import { HeaderLogo, HeaderMenuWrapper, HeaderMenuItem } from '../styled/Header.style'
 
 export const Header = ({ redirectToMain, redirectToDate }) => {
-    const [show, setShow] = useState(false);
+    const [show, setShow] = useState(false)
 
     const handleClose = () => {
         setShow(false)

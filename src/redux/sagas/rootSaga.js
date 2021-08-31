@@ -1,8 +1,8 @@
-import { fork } from 'redux-saga/effects';
+import { fork } from 'redux-saga/effects'
 
-import { fetchPremieresWatcher } from './premieresSaga';
-import { fetchTodayWatcher } from './todaySaga';
-import { fetchTommorowWatcher } from './tommorowSaga';
+import { fetchPremieresWatcher } from './premieresSaga'
+import { fetchTodayWatcher } from './todaySaga'
+import { fetchTommorowWatcher } from './tommorowSaga'
 
 export default function* rootSaga() {
     yield fork(fetchPremieresWatcher)

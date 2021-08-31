@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-import { FooterBackgroundColor, FooterTextColor } from './style.variables';
+import { FooterBackgroundColor, FooterTextColor } from './style.variables'
 
 export const FooterWrapper = styled.div`
   width: 100%;

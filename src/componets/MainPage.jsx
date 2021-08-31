@@ -4,7 +4,7 @@ import { Row, Carousel } from 'react-bootstrap'
 import { connect } from 'react-redux'
 
 
-import { Slider } from './Slider';
+import { Slider } from './Slider'
 import {
     MainPageTitleWrapper, 
     InnerContainerStyle,

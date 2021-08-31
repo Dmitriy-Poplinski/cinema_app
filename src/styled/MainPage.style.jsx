@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { 
   MainPageTabletTitleWrapper, 
   MainPageMobileTitleWrapper 
-} from './style.variables';
+} from './style.variables'
 
 export const MainPageTitleWrapper = styled.div`
   margin-top: 80px;
