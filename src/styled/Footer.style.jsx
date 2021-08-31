@@ -1,4 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+
+import { FooterBackgroundColor, FooterTextColor } from './style.variables';
 
 export const FooterWrapper = styled.div`
   width: 100%;
@@ -9,8 +11,8 @@ export const FooterWrapper = styled.div`
 
 export const FooterInner = styled.div`
   height: 100px;
-  background-color: #2d3540;
-  color: #fff;
+  background-color: ${FooterBackgroundColor};
+  color: ${FooterTextColor};
   font-size: 28px;
   width: 100%;
   display: flex;

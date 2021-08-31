@@ -7,7 +7,8 @@ import {
   SliderTabletParagraph,
   SliderMobileParagraph, 
   SliderTabletButtonWrapper,
-  SliderTabletDetailsWrapper
+  SliderTabletDetailsWrapper,
+  SliderParagraphBackgroundColor
 } from './style.variables'
 
 export const MainPageTextWrapper = styled.span`
@@ -36,7 +37,7 @@ export const MainPageParagraph = styled.p`
   width: 40%;
   padding: 20px;
   font-size: 25px;
-  background-color: #ccc;
+  background-color: ${SliderParagraphBackgroundColor};
   margin-top: 20px;
   @media (max-width: ${SliderTabletParagraph}) {
     padding: 7px;
