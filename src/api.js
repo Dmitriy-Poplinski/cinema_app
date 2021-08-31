@@ -1,9 +1,13 @@
 import * as axios from 'axios'
 
+const instance = axios.create({
+    baseURL: 'https://demo3586434.mockable.io/'
+  });
+
 export const AxiosAPI = {
     setPremieres: async () => {
         let data = []
-        await axios.get('https://demo3586434.mockable.io/premieres')
+        await instance.get('premieres')
         .then((res) => {
             data = res.data.premieres
         })
@@ -11,7 +15,7 @@ export const AxiosAPI = {
     },
     setTodayMovies: async () => {
         let data = []
-        await axios.get('https://demo3586434.mockable.io/date/aug_23')
+        await instance.get('date/aug_23')
         .then((res) => {
             data = res.data.aug_23
         })
@@ -19,7 +23,7 @@ export const AxiosAPI = {
     },
     setTommorowMovies: async () => {
         let data = []
-        await axios.get('https://demo3586434.mockable.io/date/aug_24')
+        await instance.get('date/aug_24')
         .then((res) => {
             data = res.data.aug_24
         })
