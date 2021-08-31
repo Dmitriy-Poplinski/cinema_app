@@ -1,8 +1,10 @@
-import styled, {createGlobalStyle} from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 import { 
   CommonLaptopRowWrapper,
-  CommonMobileAppWrapper 
+  CommonMobileAppWrapper,
+  CommonBodyLinearGradient,
+  CommonLinkColor 
 } from './style.variables'
 
 export const Global = createGlobalStyle`
@@ -14,7 +16,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: ${CommonBodyLinearGradient};
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 }
@@ -38,7 +40,7 @@ code {
 
 a {
   text-decoration: none;
-  color: white;
+  color: ${CommonLinkColor};
 }
 `
 

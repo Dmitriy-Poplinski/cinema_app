@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import {Button , Col} from 'react-bootstrap'
+import { Button , Col } from 'react-bootstrap'
 
 import { 
     PosterImg, 
@@ -9,7 +9,7 @@ import {
 } from '../styled/Poster.style'
 import { PosterProps } from '../react-app-env'
 
-export const Poster: React.FunctionComponent<PosterProps> = ({posterImage, altText, date, time}) => {
+export const Poster: React.FunctionComponent<PosterProps> = ({ posterImage, altText, date, time }) => {
     const [showInfo, setShowInfo] = useState(true)
 
     const showInfoToggle = () => {

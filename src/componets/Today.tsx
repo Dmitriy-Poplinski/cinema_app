@@ -1,13 +1,14 @@
-import {Container, Row} from 'react-bootstrap'
+import { Container, Row } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import { useEffect } from 'react'
 
 import { RowWrapper } from '../styled/Common.style'
 import { Poster } from './Poster'
+
 import { asyncFetchTodayMoviesWidget } from '../redux/ducks/today'
 import { PosterType, TodayState, TodayProps } from '../react-app-env'
 
-const Today: React.FunctionComponent<TodayProps> = ({posters, asyncFetchTodayMovies}) => {
+const Today: React.FunctionComponent<TodayProps> = ({ posters, asyncFetchTodayMovies }) => {
     useEffect(() => {
         asyncFetchTodayMovies()
     })

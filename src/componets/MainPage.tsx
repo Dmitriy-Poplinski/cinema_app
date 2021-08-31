@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import {  Row, Carousel } from 'react-bootstrap'
 import { connect } from 'react-redux'
 
-import { Slider } from './Slider';
+import { Slider } from './Slider'
 import {
     MainPageTitleWrapper, 
     InnerContainerStyle,
@@ -12,7 +12,7 @@ import {
 import { asyncFetchPremieresWidget } from '../redux/ducks/premieres'
 import { Premiere, MainPageProps, PremiereState } from '../react-app-env'
 
-const MainPage: React.FunctionComponent<MainPageProps> = ({premieres, asyncFetchPremieres, }) => {
+const MainPage: React.FunctionComponent<MainPageProps> = ({ premieres, asyncFetchPremieres }) => {
     const [showInfo, setShowInfo] = useState(false)
 
     useEffect(() => {

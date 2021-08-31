@@ -1,13 +1,14 @@
-import {Container, Row } from 'react-bootstrap'
+import { Container, Row } from 'react-bootstrap'
 import { useEffect } from 'react'
 import { connect } from 'react-redux'
 
 import { Poster } from './Poster'
 import { RowWrapper } from '../styled/Common.style'
+
 import { asyncFetchTommorowMoviesWidget } from '../redux/ducks/tommorow'
 import { TommorowState, PosterType, TommorowProps } from '../react-app-env'
 
-const Tommorow: React.FunctionComponent<TommorowProps> = ({posters, asyncFetchTommorowMovies}) => {
+const Tommorow: React.FunctionComponent<TommorowProps> = ({ posters, asyncFetchTommorowMovies }) => {
     useEffect(() => {
         asyncFetchTommorowMovies()
     })

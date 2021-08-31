@@ -11708,6 +11708,11 @@
   "resolved" "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz"
   "version" "0.0.6"
 
+"types-axios@^0.0.8":
+  "integrity" "sha512-JUmfD0OMOEDLidoOpqL6DhgY/UAUHoAMFhKCUTyukW5vq1p7OtvGhS5zZuI18Zgwl6gEP35AIMLwEGenXEHi6Q=="
+  "resolved" "https://registry.npmjs.org/types-axios/-/types-axios-0.0.8.tgz"
+  "version" "0.0.8"
+
 "typescript-compare@^0.0.2":
   "integrity" "sha512-8ja4j7pMHkfLJQO2/8tut7ub+J3Lw2S3061eJLFQcvs3tsmJKp8KG5NtpLn7KcY2w08edF74BSVN7qJS0U6oHA=="
   "resolved" "https://registry.npmjs.org/typescript-compare/-/typescript-compare-0.0.2.tgz"

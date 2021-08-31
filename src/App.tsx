@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import { useState } from 'react'
 import { BrowserRouter, Route, Redirect } from 'react-router-dom'
 import { Row } from 'react-bootstrap'
 import { Provider } from 'react-redux'
@@ -13,7 +13,7 @@ import {
   ModalDate 
 } from './componets'
 import { AppWrapper } from './styled/Common.style'
-import store from './redux/store';
+import store from './redux/store'
 
 const App: React.FunctionComponent = () => {
   const [date, setDate] = useState(false)

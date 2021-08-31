@@ -1,13 +1,13 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
-import { PosterMobileColumn, PosterMobileImage } from './style.variables';
+import { PosterBackgroundColor, PosterMobileColumn, PosterMobileImage } from './style.variables'
 
 export const PosterStyledColumn = styled.div`
   width: 400px;
   height: 600px;
   margin-right: auto;
   margin-left: auto;
-  background-color: #ccc;
+  background-color: ${PosterBackgroundColor};
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 10px;

@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import {Navbar, Nav} from 'react-bootstrap'
+import { Navbar, Nav } from 'react-bootstrap'
 
 import { ModalDate } from './ModalDate'
 import { HeaderLogo, HeaderMenuWrapper, HeaderMenuItem } from '../styled/Header.style'
 import { HeaderProps } from './../react-app-env.d'
 
-export const Header: React.FunctionComponent<HeaderProps> = ({redirectToMain, redirectToDate}) => {
-    const [show, setShow] = useState(false);
+export const Header: React.FunctionComponent<HeaderProps> = ({ redirectToMain, redirectToDate }) => {
+    const [show, setShow] = useState(false)
 
     const handleClose= (): void => {
         setShow(false)
