@@ -16,5 +16,3 @@ export default function* rootSaga() {
     yield fork(fetchTodayWatcher)
     yield fork(fetchTommorowWatcher)
 }
-
-

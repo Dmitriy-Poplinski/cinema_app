@@ -22,8 +22,6 @@ export default (state = initialState, action: Action) => {
             return state}
 }
 
-
-
 function* fetchPremieresWorker() {
     const data: { call(): void } = yield call(AxiosAPI.setPremieres)
     yield put(fetchPremieresWidget(data))
@@ -32,4 +30,3 @@ function* fetchPremieresWorker() {
 export function* fetchPremieresWatcher() {
     yield takeEvery(asyncFetchPremieresWidget().type, fetchPremieresWorker)
 }
-
