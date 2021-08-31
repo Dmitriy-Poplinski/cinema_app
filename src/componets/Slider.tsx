@@ -10,7 +10,7 @@ import {
 
 import { SliderProps } from './../react-app-env.d'
 
-export const Slider: React.FunctionComponent<SliderProps> = ({ 
+export const Slider: React.FC<SliderProps> = ({ 
     showInfoToggle, 
     posterImage, 
     altText, 

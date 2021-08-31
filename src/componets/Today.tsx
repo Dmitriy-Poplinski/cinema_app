@@ -8,7 +8,7 @@ import { Poster } from './Poster'
 import { asyncFetchTodayMoviesWidget } from '../redux/ducks/today'
 import { PosterType, TodayState, TodayProps } from '../react-app-env'
 
-const Today: React.FunctionComponent<TodayProps> = ({ posters, asyncFetchTodayMovies }) => {
+const Today: React.FC<TodayProps> = ({ posters, asyncFetchTodayMovies }) => {
     useEffect(() => {
         asyncFetchTodayMovies()
     })

@@ -6,7 +6,7 @@ import { ModalDate } from './ModalDate'
 import { HeaderLogo, HeaderMenuWrapper, HeaderMenuItem } from '../styled/Header.style'
 import { HeaderProps } from './../react-app-env.d'
 
-export const Header: React.FunctionComponent<HeaderProps> = ({ redirectToMain, redirectToDate }) => {
+export const Header: React.FC<HeaderProps> = ({ redirectToMain, redirectToDate }) => {
     const [show, setShow] = useState(false)
 
     const handleClose= (): void => {

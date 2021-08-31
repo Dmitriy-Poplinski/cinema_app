@@ -15,7 +15,7 @@ import {
 import { AppWrapper } from './styled/Common.style'
 import store from './redux/store'
 
-const App: React.FunctionComponent = () => {
+const App: React.FC = () => {
   const [date, setDate] = useState(false)
 
   const redirectToMain = (): void => {

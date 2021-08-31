@@ -6,7 +6,7 @@ import {
   KeyboardDatePicker,
 } from '@material-ui/pickers'
 
-export const DatePicker: React.FunctionComponent = () => {
+export const DatePicker: React.FC = () => {
   const [selectedDate, setSelectedDate] = useState('2021-08-23')
 
   const handleDateChange = (date: any) => {

@@ -1,6 +1,6 @@
 import { AboutWrapper, AboutTitle } from '../styled/About.style'
 
-export const About: React.FunctionComponent = () => (
+export const About: React.FC = () => (
     <AboutWrapper>
         <AboutTitle>Про нас</AboutTitle>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 

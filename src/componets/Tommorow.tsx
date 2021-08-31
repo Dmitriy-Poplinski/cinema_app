@@ -8,7 +8,7 @@ import { RowWrapper } from '../styled/Common.style'
 import { asyncFetchTommorowMoviesWidget } from '../redux/ducks/tommorow'
 import { TommorowState, PosterType, TommorowProps } from '../react-app-env'
 
-const Tommorow: React.FunctionComponent<TommorowProps> = ({ posters, asyncFetchTommorowMovies }) => {
+const Tommorow: React.FC<TommorowProps> = ({ posters, asyncFetchTommorowMovies }) => {
     useEffect(() => {
         asyncFetchTommorowMovies()
     })

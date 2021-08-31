@@ -3,7 +3,7 @@ import { Modal, Button } from 'react-bootstrap'
 import { DatePicker } from './DatePicker'
 import { ModalDateProps } from './../react-app-env.d'
 
-export const ModalDate: React.FunctionComponent<ModalDateProps>  = ({ show, handleClose }) => (
+export const ModalDate: React.FC<ModalDateProps>  = ({ show, handleClose }) => (
     <>
         <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>

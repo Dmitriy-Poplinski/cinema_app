@@ -12,7 +12,7 @@ import {
 import { asyncFetchPremieresWidget } from '../redux/ducks/premieres'
 import { Premiere, MainPageProps, PremiereState } from '../react-app-env'
 
-const MainPage: React.FunctionComponent<MainPageProps> = ({ premieres, asyncFetchPremieres }) => {
+const MainPage: React.FC<MainPageProps> = ({ premieres, asyncFetchPremieres }) => {
     const [showInfo, setShowInfo] = useState(false)
 
     useEffect(() => {
