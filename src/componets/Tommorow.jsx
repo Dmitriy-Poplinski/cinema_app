@@ -1,4 +1,4 @@
-import {Container, Row } from 'react-bootstrap'
+import { Container, Row } from 'react-bootstrap'
 import { useEffect } from 'react'
 import { connect } from 'react-redux'
 
@@ -6,7 +6,7 @@ import { Poster } from './Poster'
 import { RowWrapper } from '../styled/Common.style'
 import { asyncFetchTommorowMoviesAC } from '../redux/types'
 
-const Tommorow = ({posters, asyncFetchTommorowMovies}) => {
+const Tommorow = ({ posters, asyncFetchTommorowMovies }) => {
     useEffect(() => {
         asyncFetchTommorowMovies()
     })

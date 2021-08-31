@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import {Button , Col} from 'react-bootstrap'
+import { Button, Col } from 'react-bootstrap'
 
 import { 
     PosterImg, 
@@ -8,7 +8,7 @@ import {
     PosterTimeWrapper 
 } from '../styled/Poster.style'
 
-export const Poster = ({posterImage, altText, date, time}) => {
+export const Poster = ({ posterImage, altText, date, time }) => {
     const [showInfo, setShowInfo] = useState(true)
 
     const showInfoToggle = () => {

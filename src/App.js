@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import { useState } from 'react'
 import { BrowserRouter, Route, Redirect } from 'react-router-dom'
 import { Row } from 'react-bootstrap'
 import { Provider } from 'react-redux'

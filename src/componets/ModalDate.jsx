@@ -2,7 +2,7 @@ import { Modal, Button } from 'react-bootstrap'
 
 import { DatePicker } from './DatePicker'
 
-export const ModalDate = ({show, handleClose}) => (
+export const ModalDate = ({ show, handleClose }) => (
     <>
         <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>

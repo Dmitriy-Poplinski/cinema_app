@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-import {  Row, Carousel } from 'react-bootstrap'
+import { Row, Carousel } from 'react-bootstrap'
 import { connect } from 'react-redux'
 
 
@@ -13,7 +13,7 @@ import {
 import { asyncFetchPremieresAC } from '../redux/types'
 
 
-const MainPage = ({premieres, asyncFetchPremieres}) => {
+const MainPage = ({ premieres, asyncFetchPremieres }) => {
     const [showInfo, setShowInfo] = useState(false)
 
     useEffect(() => {

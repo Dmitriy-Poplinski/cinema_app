@@ -8,7 +8,7 @@ import {
     MainPageDetailsWrapper,
 } from './../styled/Slider.style'
 
-export const Slider = ({showInfoToggle, posterImage, altText, title, text, showInfo}) => (
+export const Slider = ({ showInfoToggle, posterImage, altText, title, text, showInfo }) => (
     <>
         {showInfo ?
             <>
