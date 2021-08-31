@@ -5,19 +5,7 @@ import { connect } from 'react-redux'
 import { Poster } from './Poster'
 import { RowWrapper } from '../styled/Common.style'
 import { asyncFetchTommorowMoviesWidget } from '../redux/ducks/tommorow'
-
-interface TommorowProps {
-    posters: [],
-    asyncFetchTommorowMovies(): object 
-}
-
-type PosterType = {
-    posterImage: string,
-    altText: string,
-    date: string,
-    time: string,
-    id: number,
-}
+import { TommorowState, PosterType, TommorowProps } from '../react-app-env'
 
 const Tommorow: React.FunctionComponent<TommorowProps> = ({posters, asyncFetchTommorowMovies}) => {
     useEffect(() => {
@@ -45,9 +33,7 @@ const Tommorow: React.FunctionComponent<TommorowProps> = ({posters, asyncFetchTo
     )
 }
 
-type State = {tommorowReducer: {aug_24: []}}
-
-const mapStateToProps = (state: State) => ({
+const mapStateToProps = (state: TommorowState) => ({
     posters: state.tommorowReducer.aug_24
 })
 

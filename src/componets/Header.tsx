@@ -4,11 +4,7 @@ import {Navbar, Nav} from 'react-bootstrap'
 
 import { ModalDate } from './ModalDate'
 import { HeaderLogo, HeaderMenuWrapper, HeaderMenuItem } from '../styled/Header.style'
-
-interface HeaderProps {
-    redirectToMain(): void,
-    redirectToDate(): void
-}
+import { HeaderProps } from './../react-app-env.d'
 
 export const Header: React.FunctionComponent<HeaderProps> = ({redirectToMain, redirectToDate}) => {
     const [show, setShow] = useState(false);

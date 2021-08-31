@@ -5,19 +5,7 @@ import { useEffect } from 'react'
 import { RowWrapper } from '../styled/Common.style'
 import { Poster } from './Poster'
 import { asyncFetchTodayMoviesWidget } from '../redux/ducks/today'
-
-interface TodayProps {
-    posters: [],
-    asyncFetchTodayMovies(): object 
-}
-
-type PosterType = {
-    posterImage: string,
-    altText: string,
-    date: string,
-    time: string,
-    id: number,
-}
+import { PosterType, TodayState, TodayProps } from '../react-app-env'
 
 const Today: React.FunctionComponent<TodayProps> = ({posters, asyncFetchTodayMovies}) => {
     useEffect(() => {
@@ -45,9 +33,7 @@ const Today: React.FunctionComponent<TodayProps> = ({posters, asyncFetchTodayMov
     )
 }
 
-type State = {todayReducer: {aug_23: []}}
-
-const mapStateToProps = (state: State) => ({posters: state.todayReducer.aug_23})
+const mapStateToProps = (state: TodayState) => ({posters: state.todayReducer.aug_23})
 
 const mapDispatchToProps = (dispatch: any) => ({
     asyncFetchTodayMovies: () => dispatch(asyncFetchTodayMoviesWidget())

@@ -1,11 +1,7 @@
 import { Modal, Button } from 'react-bootstrap'
 
 import { DatePicker } from './DatePicker'
-
-interface ModalDateProps {
-    show: boolean,
-    handleClose(): void
-}
+import { ModalDateProps } from './../react-app-env.d'
 
 export const ModalDate: React.FunctionComponent<ModalDateProps>  = ({show, handleClose}) => (
     <>

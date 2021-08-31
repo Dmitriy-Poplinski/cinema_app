@@ -7,13 +7,7 @@ import {
     PosterStyledColumn, 
     PosterTimeWrapper 
 } from '../styled/Poster.style'
-
-interface PosterProps {
-    posterImage: string,
-    altText: string,
-    date: string,
-    time: string
-}
+import { PosterProps } from '../react-app-env'
 
 export const Poster: React.FunctionComponent<PosterProps> = ({posterImage, altText, date, time}) => {
     const [showInfo, setShowInfo] = useState(true)

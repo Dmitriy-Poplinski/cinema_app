@@ -10,19 +10,7 @@ import {
 } from '../styled/MainPage.style'
 
 import { asyncFetchPremieresWidget } from '../redux/ducks/premieres'
-
-interface MainPageProps {
-    premieres: [],
-    asyncFetchPremieres(): object,
-}
-
-type Premiere = {
-    posterImage: string,
-    altText: string,
-    title: string,
-    text: string,
-    id: number,
-}
+import { Premiere, MainPageProps, PremiereState } from '../react-app-env'
 
 const MainPage: React.FunctionComponent<MainPageProps> = ({premieres, asyncFetchPremieres, }) => {
     const [showInfo, setShowInfo] = useState(false)
@@ -63,9 +51,7 @@ const MainPage: React.FunctionComponent<MainPageProps> = ({premieres, asyncFetch
     )
 }
 
-type State = {premiereReducer: {premieres: []}}
-
-const mapStateToProps = (state: State) => (
+const mapStateToProps = (state: PremiereState) => (
     {premieres: state.premiereReducer.premieres}
 )
 

@@ -7,15 +7,7 @@ import {
     MainPageButtonWrapper,
     MainPageDetailsWrapper,
 } from '../styled/Slider.style'
-
-interface SliderProps {
-    showInfoToggle(): void,
-    posterImage: string,
-    altText: string,
-    title: string,
-    text: string,
-    showInfo: boolean,
-}
+import { SliderProps } from './../react-app-env.d'
 
 export const Slider: React.FunctionComponent<SliderProps> = ({showInfoToggle, posterImage, altText, title, text, showInfo}) => (
     <>
